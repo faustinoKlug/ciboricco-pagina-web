@@ -10,7 +10,7 @@
 
 .bg-menu {
  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  url(assets/gallery-8.jpg);
+  url(assets/gallery-8.webp);
  background-attachment: fixed;
  background-position: center center;
  background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 
 .bg-carta {
  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  url(assets/2151187693.jpg);
+  url(assets/2151187693.webp);
  background-attachment: fixed;
  background-position: 0 center;
  background-repeat: no-repeat;
@@ -28,12 +28,12 @@
 
 .bg-hero {
  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  url(assets/hero-image.jpg);
+  url(assets/hero-image.webp);
 }
 
 .bg-about {
  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  url(assets/about-us.jpg);
+  url(assets/about-us.webp);
  background-position: center center;
  background-size: cover;
  background-repeat: no-repeat;
@@ -42,14 +42,14 @@
 @media (max-width: 768px) {
  .bg-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-   url(assets/hero-image-md.jpg);
+   url(assets/hero-image-md.webp);
  }
 }
 
 @media (max-width: 337px) {
  .bg-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-   url(assets/hero-image-sm.jpg);
+   url(assets/hero-image-sm.webp);
  }
 }
 
