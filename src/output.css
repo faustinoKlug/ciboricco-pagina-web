@@ -574,14 +574,6 @@ video {
   top: 0px;
 }
 
-.top-\[-10\%px\]{
-  top: -10%px;
-}
-
-.z-10{
-  z-index: 10;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -691,16 +683,16 @@ video {
   height: 3.5rem;
 }
 
-.h-\[100px\]{
-  height: 100px;
-}
-
-.h-\[120px\]{
-  height: 120px;
+.h-\[190px\]{
+  height: 190px;
 }
 
 .h-\[220px\]{
   height: 220px;
+}
+
+.h-\[350px\]{
+  height: 350px;
 }
 
 .h-\[40dvh\]{
@@ -721,6 +713,10 @@ video {
 
 .h-full{
   height: 100%;
+}
+
+.w-\[190px\]{
+  width: 190px;
 }
 
 .w-\[220px\]{
@@ -1212,6 +1208,11 @@ video {
   transition-duration: 150ms;
 }
 
+.fuga {
+  -o-object-position: center -50px;
+     object-position: center -50px;
+}
+
 .pizza {
   top: 85%;
 }
@@ -1227,7 +1228,7 @@ video {
 
 .bg-carta {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  url(assets/2151187693.webp);
+  url(assets/menu-hero.webp);
   background-attachment: fixed;
   background-position: 0 center;
   background-repeat: no-repeat;
