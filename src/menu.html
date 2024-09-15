@@ -24,8 +24,30 @@
     <meta property="twitter:image" content="https://ciboricco.netlify.app/assets/logo2.webp">
 </head>
 
-<body class="bg-negrito overflow-x-hidden font-raleway flex flex-col justify-between">
-    <div class="flex flex-col full h-[50dvh] bg-carta">
+<body class="bg-negrito overflow-x-hidden font-raleway flex flex-col justify-between w-full items-center relative">
+    <div class="bg-menupedido hidden" id="overlay-pedido">
+    </div>
+
+    <div class="fixed top-[20%] bg-[#191919] text-white p-4 rounded-lg w-full h-full max-w-[420px] max-h-[500px] z-[10001] flex-col items-center justify-center gap-y-4 hidden" id="menu-pedido">
+        <button class="absolute text-5xl top-0 right-0 pr-4 close-pedido">&times;</button>
+        <h2 class="font-bold font-bebas text-3xl sm:text-4xl text-center flex items-center gap-x-1 tracking-wide">
+            HACÉ TU PEDIDO
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 36 36">
+                <path fill="#ffffff" d="M21 12H7a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1M8 10h12V7.94H8Z" class="clr-i-outline clr-i-outline-path-1"/><path fill="#ffffff" d="M21 14.08H7a1 1 0 0 0-1 1V19a1 1 0 0 0 1 1h11.36L22 16.3v-1.22a1 1 0 0 0-1-1M20 18H8v-2h12Z" class="clr-i-outline clr-i-outline-path-2"/><path fill="#ffffff" d="M11.06 31.51v-.06l.32-1.39H4V4h20v10.25l2-1.89V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v28a1 1 0 0 0 1 1h8a3.4 3.4 0 0 1 .06-.49" class="clr-i-outline clr-i-outline-path-3"/><path fill="#ffffff" d="m22 19.17l-.78.79a1 1 0 0 0 .78-.79" class="clr-i-outline clr-i-outline-path-4"/><path fill="#ffffff" d="M6 26.94a1 1 0 0 0 1 1h4.84l.3-1.3l.13-.55v-.05H8V24h6.34l2-2H7a1 1 0 0 0-1 1Z" class="clr-i-outline clr-i-outline-path-5"/><path fill="#ffffff" d="m33.49 16.67l-3.37-3.37a1.61 1.61 0 0 0-2.28 0L14.13 27.09L13 31.9a1.61 1.61 0 0 0 1.26 1.9a1.6 1.6 0 0 0 .31 0a1.2 1.2 0 0 0 .37 0l4.85-1.07L33.49 19a1.6 1.6 0 0 0 0-2.27ZM18.77 30.91l-3.66.81l.89-3.63L26.28 17.7l2.82 2.82Zm11.46-11.52l-2.82-2.82L29 15l2.84 2.84Z" class="clr-i-outline clr-i-outline-path-6"/><path fill="none" d="M0 0h36v36H0z"/>
+            </svg>
+        </h2>
+        <div class="flex flex-col items-center justify-center w-[70%]">
+            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="pedido" placeholder="Pedido"/>    
+            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="nombre" placeholder="Nombre y apellido"/>    
+            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="domicilio" placeholder="Domicilio"/>
+            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="horario" placeholder="Horario de entrega"/>  
+            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="comentario" placeholder="Comentario adicional"/>    
+
+            <button id="enviar-pedido" class="border-none bg-white text-black rounded-xl py-3 px-6 font-semibold mt-4">Enviar pedido</button>
+        </div>
+    </div>
+
+    <div class="flex flex-col full h-[50dvh] bg-carta w-full">
         <header class="fixed top-0 h-auto w-full text-white flex items-center bg-header justify-center">
 
             <!-- MENU MBOILE -->
@@ -116,10 +138,8 @@
                     <div class="lineas linea-3 bg-red-500" style="width: 33%; height: 3px; "></div>
                 </article>
 
-                <a href="https://wa.me/message/7YNTWW6SB2L4A1" class="bouncing-element mt-[5px]" target="_blank">
-                    <button
-                        class="flex items-center font-mediumbold text-gray-900 rounded-xl bg-white px-3 py-1 justify-center font-bebas text-2xl tracking-wide lg:px-4 lg:py-2 lg:text-3xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="-2 -2 24 24"
+                <button class="items-center font-mediumbold text-gray-900 rounded-xl bg-white px-3 py-1 justify-center font-bebas text-2xl tracking-wide lg:px-4 lg:py-2 lg:text-3xl bouncing-element mt-[5px] flex hacetupedido">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="-2 -2 24 24"
                             class="mr-2">
                             <g fill="#059669">
                                 <path
@@ -127,10 +147,9 @@
                                 <path
                                     d="m14.842 12.045l-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903c-.137 1.343.443 3.036 2.637 5.07c2.535 2.349 4.566 2.66 5.887 2.341c.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072" />
                             </g>
-                        </svg>
-                        HACÉ TU PEDIDO
-                    </button>
-                </a>
+                    </svg>
+                    HACÉ TU PEDIDO
+                </button>
             </article>
         </section>
     </div>
@@ -717,7 +736,7 @@
                             <p class="flex w-full justify-between text-lg md:text-xl text-pink-400 items-center">
                                 CLÁSICO
                                 <span
-                                    class="font-bold lg:text-cyan-500 p-1 lg:border-cyan-500 text-white border-white border-[1px] ml-1">$10500</span>
+                                    class="font-bold lg:text-green-500 p-1 lg:border-green-500 text-white border-white border-[1px] ml-1">$10500</span>
                             </p>
                             <p class="text-lg">Salsa, muzzarella y jamón</p>
                         </div>
@@ -740,7 +759,7 @@
                             <p class="flex w-full justify-between text-lg md:text-xl text-lime-700 items-center">
                                 CEBOLLA
                                 <span
-                                    class="font-bold lg:text-cyan-500 p-1 lg:border-cyan-500 text-white border-white border-[1px]">$11000</span>
+                                    class="font-bold lg:text-red-500 p-1 lg:border-red-500 text-white border-white border-[1px]">$11000</span>
                             </p>
                             <p class="text-lg">Salsa, muzzarella y cebolla caramelizada</p>
                         </div>
@@ -752,8 +771,7 @@
                             <p class="flex w-full justify-between text-lg md:text-xl text-yellow-400 items-center">
                                 CARNE
                                 <span
-                                    class="font-bold lg:text-cyan-500 p-1 lg:border-cyan-500 text-white border-white border-[1px] ml-1">$11900
-                                    <span class="text-white font-light">doc.</span></span>
+                                    class="font-bold lg:text-green-500 p-1 lg:border-green-500 text-white border-white border-[1px] ml-1">$11900</span>
                             </p>
                             <p class="text-lg">Salsa, muzzarella y carne picada</p>
                         </div>
@@ -764,8 +782,7 @@
 
                             <p class="flex w-full justify-between text-lg md:text-xl text-red-700 items-center">
                                 CAPRESSE
-                                <span class="font-bold p-1 text-white border-white border-[1px] ml-1">$11900 <span
-                                        class="text-white font-light">doc.</span></span>
+                                <span class="font-bold p-1 text-white border-white border-[1px] ml-1">$11900</span>
                             </p>
                             <p class="text-lg">Salsa, muzzarella, cherry y albahaca</p>
                         </div>

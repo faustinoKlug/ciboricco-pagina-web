@@ -590,11 +590,6 @@ video {
   z-index: 10001;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -809,6 +804,10 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -884,6 +883,10 @@ video {
 
 .overflow-x-hidden{
   overflow-x: hidden;
+}
+
+.overflow-y-hidden{
+  overflow-y: hidden;
 }
 
 .scroll-smooth{

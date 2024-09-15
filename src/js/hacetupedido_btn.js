@@ -28,6 +28,7 @@ export default function openForm(
       $menu.classList.remove("hidden");
       $menu.classList.add("flex");
       $overlay.classList.remove("hidden");
+      d.documentElement.classList.add("overflow-y-hidden");
     });
   });
 
@@ -35,6 +36,7 @@ export default function openForm(
     $menu.classList.remove("flex");
     $menu.classList.add("hidden");
     $overlay.classList.add("hidden");
+    d.documentElement.classList.remove("overflow-y-hidden");
   });
 
   $pedidoBtn.addEventListener("click", (e) => {
