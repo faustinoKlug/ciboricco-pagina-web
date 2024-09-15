@@ -566,12 +566,33 @@ video {
   position: fixed;
 }
 
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
 }
 
+.right-0{
+  right: 0px;
+}
+
 .top-0{
   top: 0px;
+}
+
+.top-\[20\%\]{
+  top: 20%;
+}
+
+.z-\[10001\]{
+  z-index: 10001;
+}
+
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mx-auto{
@@ -663,10 +684,6 @@ video {
   margin-top: 5px;
 }
 
-.block{
-  display: block;
-}
-
 .flex{
   display: flex;
 }
@@ -715,6 +732,10 @@ video {
   height: 100%;
 }
 
+.max-h-\[500px\]{
+  max-height: 500px;
+}
+
 .w-\[190px\]{
   width: 190px;
 }
@@ -725,6 +746,10 @@ video {
 
 .w-\[400px\]{
   width: 400px;
+}
+
+.w-\[70\%\]{
+  width: 70%;
 }
 
 .w-auto{
@@ -761,6 +786,10 @@ video {
 
 .max-w-\[400px\]{
   max-width: 400px;
+}
+
+.max-w-\[420px\]{
+  max-width: 420px;
 }
 
 .max-w-\[480px\]{
@@ -812,6 +841,11 @@ video {
   gap: 0.5rem;
 }
 
+.gap-x-1{
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+
 .gap-x-12{
   -moz-column-gap: 3rem;
        column-gap: 3rem;
@@ -830,6 +864,10 @@ video {
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+}
+
+.gap-y-4{
+  row-gap: 1rem;
 }
 
 .gap-y-5{
@@ -886,6 +924,10 @@ video {
 
 .border-t-\[10px\]{
   border-top-width: 10px;
+}
+
+.border-none{
+  border-style: none;
 }
 
 .border-\[\#191919\]{
@@ -1034,6 +1076,10 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.pr-4{
+  padding-right: 1rem;
+}
+
 .pt-16{
   padding-top: 4rem;
 }
@@ -1106,6 +1152,11 @@ video {
 
 .tracking-wider{
   letter-spacing: 0.05em;
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-cyan-500{
@@ -1208,9 +1259,28 @@ video {
   transition-duration: 150ms;
 }
 
+#enviar-pedido {
+  transition: all .4s ease;
+}
+
+#enviar-pedido:hover {
+  background: #191919;
+  color: white;
+}
+
 .fuga {
   -o-object-position: center -50px;
      object-position: center -50px;
+}
+
+.bg-menupedido {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 10000;
 }
 
 .pizza {
@@ -1434,11 +1504,6 @@ video {
     row-gap: 1.75rem;
   }
 
-  .md\:px-2{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
   .md\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1447,11 +1512,6 @@ video {
   .md\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
-  }
-
-  .md\:py-1{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
   }
 
   .md\:py-4{
@@ -1499,10 +1559,6 @@ video {
 
   .lg\:mr-8{
     margin-right: 2rem;
-  }
-
-  .lg\:block{
-    display: block;
   }
 
   .lg\:flex{

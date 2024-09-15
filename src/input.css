@@ -5,8 +5,27 @@
 @tailwind components;
 @tailwind utilities;
 
+#enviar-pedido {
+  transition: all .4s ease;
+}
+
+#enviar-pedido:hover {
+  background: #191919;
+  color: white;
+}
+
 .fuga {
   object-position: center -50px;
+}
+
+.bg-menupedido {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 10000;
 }
 
 .pizza {
