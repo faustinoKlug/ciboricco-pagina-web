@@ -42,7 +42,7 @@ export default function openForm(
     const total = cart.reduce((acc, el) => acc + el.price * el.quanty, 0);
 
     let whatsappMessage = `
-    https://wa.me/3442558577?text=*Pedido:*%0A${encodeURIComponent(pedidoValue)}%0A*Total:* $${total}%0A%0A*Nombre%20y%20apellido:*%0A${nombreValue}%0A%0A*Dirección:*%0A${domicilioValue}%0A%0A*Horario%20de%20entrega%20preferido:*%0A${horarioValue}%0A%0A*Comentario%20adicional:*%0A${comentarioValue}`;
+    https://wa.me/3442500075?text=*Pedido:*%0A${encodeURIComponent(pedidoValue)}%0A*Total:* $${total}%0A%0A*Nombre%20y%20apellido:*%0A${nombreValue}%0A%0A*Dirección:*%0A${domicilioValue}%0A%0A*Horario%20de%20entrega%20preferido:*%0A${horarioValue}%0A%0A*Comentario%20adicional:*%0A${comentarioValue}`;
 
     if (
       domicilioValue === "" ||
