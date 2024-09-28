@@ -10,7 +10,8 @@ export default function openForm(
   horario,
   comentario,
   pedido,
-  enviarpedido
+  enviarpedido,
+  pedidoCont
 ) {
   const $menuBtn = d.querySelectorAll(btn),
     $menu = d.querySelector(menu),
@@ -20,17 +21,9 @@ export default function openForm(
     $domicilioInput = d.querySelector(domicilio),
     $horarioInput = d.querySelector(horario),
     $comentarioInput = d.querySelector(comentario),
-    $pedidoInput = d.querySelector(pedido),
+    $pedidoDiv = d.querySelector(pedido),
+    $pedidoContainer = d.querySelector(pedidoCont),
     $pedidoBtn = d.querySelector(enviarpedido);
-
-  $menuBtn.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      $menu.classList.remove("hidden");
-      $menu.classList.add("flex");
-      $overlay.classList.remove("hidden");
-      d.documentElement.classList.add("overflow-y-hidden");
-    });
-  });
 
   $closeBtn.addEventListener("click", (e) => {
     $menu.classList.remove("flex");
@@ -43,22 +36,24 @@ export default function openForm(
     let domicilioValue = $domicilioInput.value,
       nombreValue = $nombreInput.value,
       horarioValue = $horarioInput.value,
-      pedidoValue = $pedidoInput.value,
-      comentarioValue = $comentarioInput.value;
+      comentarioValue = $comentarioInput.value,
+      pedidoValue = $pedidoDiv.innerHTML;
+
+    const total = cart.reduce((acc, el) => acc + el.price * el.quanty, 0);
 
     let whatsappMessage = `
-      https://wa.me/3442558577?text=Pedido:%0A${pedidoValue}%0A%0ANombre%20y%20apellido:%0A${nombreValue}%0A%0ADirección:%0A${domicilioValue}%0A%0AHorario%20de%20entrega%20preferido:%0A${horarioValue}%0A%0AComentario%20adicional:%0A${comentarioValue}`;
+    https://wa.me/3442558577?text=*Pedido:*%0A${encodeURIComponent(pedidoValue)}%0A*Total:* $${total}%0A%0A*Nombre%20y%20apellido:*%0A${nombreValue}%0A%0A*Dirección:*%0A${domicilioValue}%0A%0A*Horario%20de%20entrega%20preferido:*%0A${horarioValue}%0A%0A*Comentario%20adicional:*%0A${comentarioValue}`;
 
     if (
       domicilioValue === "" ||
       nombreValue === "" ||
       horarioValue === "" ||
-      pedidoValue === "" ||
-      comentarioValue === ""
+      pedidoValue === ""
     ) {
-      alert("Rellena TODO el formulario");
+      alert("Rellena todo el formulario");
     } else {
       window.open(whatsappMessage);
     }
   });
+
 }

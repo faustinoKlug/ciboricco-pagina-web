@@ -5,22 +5,26 @@
     <title>Menú | Variedad y sabor en cada bocado</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <link href="./output.css" rel="stylesheet">
     <link href="./hamburgers.css" rel="stylesheet">
     <link rel="icon" href="assets/logo2.webp">
     <link rel="author" content="Faustino Klug">
-    <link rel="canonical" href="https://ciboricco.netlify.app/menu"> 
-    <meta name="title" content="Menú | Pizzería Casera en Concepción del Uruguay - CIBO RICCO"> 
-    <meta name="description" content="Descubrí nuestra variedad de pizzas caseras. Desde las clásicas hasta las más originales, tenemos el sabor perfecto para vos. ¡Consultá nuestro menú completo y hacé tu pedido!">
+    <link rel="canonical" href="https://ciboricco.netlify.app/menu">
+    <meta name="title" content="Menú | Pizzería Casera en Concepción del Uruguay - CIBO RICCO">
+    <meta name="description"
+        content="Descubrí nuestra variedad de pizzas caseras. Desde las clásicas hasta las más originales, tenemos el sabor perfecto para vos. ¡Consultá nuestro menú completo y hacé tu pedido!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ciboricco.netlify.app/menu">
     <meta property="og:title" content="Menú | Pizzería Casera en Concepción del Uruguay - CIBO RICCO">
-    <meta property="og:description" content="¡Variedad de pizzas caseras te esperan! Consultá nuestro menú completo y encontrá tu favorita.">
-    <meta property="og:image" content="https://ciboricco.netlify.app/assets/logo2.webp"> 
+    <meta property="og:description"
+        content="¡Variedad de pizzas caseras te esperan! Consultá nuestro menú completo y encontrá tu favorita.">
+    <meta property="og:image" content="https://ciboricco.netlify.app/assets/logo2.webp">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ciboricco.netlify.app/menu">
     <meta property="twitter:title" content="Menú | Pizzería Casera en Concepción del Uruguay - CIBO RICCO">
-    <meta property="twitter:description" content="¡Nuestro menú te va a sorprender! Pizzas caseras para todos los gustos.">
+    <meta property="twitter:description"
+        content="¡Nuestro menú te va a sorprender! Pizzas caseras para todos los gustos.">
     <meta property="twitter:image" content="https://ciboricco.netlify.app/assets/logo2.webp">
 </head>
 
@@ -28,29 +32,53 @@
     <div class="bg-menupedido hidden" id="overlay-pedido">
     </div>
 
-    <div class="fixed top-[20%] bg-[#191919] text-white p-4 rounded-lg w-full h-full max-w-[420px] max-h-[500px] z-[10001] flex-col items-center justify-center gap-y-4 hidden" id="menu-pedido">
+    <div class="fixed top-[15%] bg-[#191919] text-white px-4 py-12 rounded-lg w-full max-w-[420px] max-h-[70vh] overflow-y-auto z-[10001] flex-col items-center justify-between gap-y-4 hidden"
+        id="menu-pedido">
         <button class="absolute text-5xl top-0 right-0 pr-4 close-pedido">&times;</button>
         <h2 class="font-bold font-bebas text-3xl sm:text-4xl text-center flex items-center gap-x-1 tracking-wide">
             HACÉ TU PEDIDO
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 36 36">
-                <path fill="#ffffff" d="M21 12H7a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1M8 10h12V7.94H8Z" class="clr-i-outline clr-i-outline-path-1"/><path fill="#ffffff" d="M21 14.08H7a1 1 0 0 0-1 1V19a1 1 0 0 0 1 1h11.36L22 16.3v-1.22a1 1 0 0 0-1-1M20 18H8v-2h12Z" class="clr-i-outline clr-i-outline-path-2"/><path fill="#ffffff" d="M11.06 31.51v-.06l.32-1.39H4V4h20v10.25l2-1.89V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v28a1 1 0 0 0 1 1h8a3.4 3.4 0 0 1 .06-.49" class="clr-i-outline clr-i-outline-path-3"/><path fill="#ffffff" d="m22 19.17l-.78.79a1 1 0 0 0 .78-.79" class="clr-i-outline clr-i-outline-path-4"/><path fill="#ffffff" d="M6 26.94a1 1 0 0 0 1 1h4.84l.3-1.3l.13-.55v-.05H8V24h6.34l2-2H7a1 1 0 0 0-1 1Z" class="clr-i-outline clr-i-outline-path-5"/><path fill="#ffffff" d="m33.49 16.67l-3.37-3.37a1.61 1.61 0 0 0-2.28 0L14.13 27.09L13 31.9a1.61 1.61 0 0 0 1.26 1.9a1.6 1.6 0 0 0 .31 0a1.2 1.2 0 0 0 .37 0l4.85-1.07L33.49 19a1.6 1.6 0 0 0 0-2.27ZM18.77 30.91l-3.66.81l.89-3.63L26.28 17.7l2.82 2.82Zm11.46-11.52l-2.82-2.82L29 15l2.84 2.84Z" class="clr-i-outline clr-i-outline-path-6"/><path fill="none" d="M0 0h36v36H0z"/>
+                <path fill="#ffffff"
+                    d="M21 12H7a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1M8 10h12V7.94H8Z"
+                    class="clr-i-outline clr-i-outline-path-1" />
+                <path fill="#ffffff"
+                    d="M21 14.08H7a1 1 0 0 0-1 1V19a1 1 0 0 0 1 1h11.36L22 16.3v-1.22a1 1 0 0 0-1-1M20 18H8v-2h12Z"
+                    class="clr-i-outline clr-i-outline-path-2" />
+                <path fill="#ffffff"
+                    d="M11.06 31.51v-.06l.32-1.39H4V4h20v10.25l2-1.89V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v28a1 1 0 0 0 1 1h8a3.4 3.4 0 0 1 .06-.49"
+                    class="clr-i-outline clr-i-outline-path-3" />
+                <path fill="#ffffff" d="m22 19.17l-.78.79a1 1 0 0 0 .78-.79"
+                    class="clr-i-outline clr-i-outline-path-4" />
+                <path fill="#ffffff" d="M6 26.94a1 1 0 0 0 1 1h4.84l.3-1.3l.13-.55v-.05H8V24h6.34l2-2H7a1 1 0 0 0-1 1Z"
+                    class="clr-i-outline clr-i-outline-path-5" />
+                <path fill="#ffffff"
+                    d="m33.49 16.67l-3.37-3.37a1.61 1.61 0 0 0-2.28 0L14.13 27.09L13 31.9a1.61 1.61 0 0 0 1.26 1.9a1.6 1.6 0 0 0 .31 0a1.2 1.2 0 0 0 .37 0l4.85-1.07L33.49 19a1.6 1.6 0 0 0 0-2.27ZM18.77 30.91l-3.66.81l.89-3.63L26.28 17.7l2.82 2.82Zm11.46-11.52l-2.82-2.82L29 15l2.84 2.84Z"
+                    class="clr-i-outline clr-i-outline-path-6" />
+                <path fill="none" d="M0 0h36v36H0z" />
             </svg>
         </h2>
-        <div class="flex flex-col items-center justify-center w-[70%]">
-            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="pedido" placeholder="Pedido"/>    
-            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="nombre" placeholder="Nombre y apellido"/>    
-            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="domicilio" placeholder="Domicilio"/>
-            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="horario" placeholder="Horario de entrega"/>  
-            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="comentario" placeholder="Comentario adicional"/>    
+        <div class="flex flex-col items-center justify-center w-[70%] pedidoContainer">
 
-            <button id="enviar-pedido" class="border-none bg-white text-black rounded-xl py-3 px-6 font-semibold mt-4">Enviar pedido</button>
+            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="nombre" placeholder="Nombre y apellido" />
+            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="domicilio" placeholder="Domicilio" />
+            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="horario" placeholder="Horario de entrega" />
+            <input class="bg-negrito2 text-white mb-2 py-2 px-3 w-full" id="comentario"
+                placeholder="Comentario adicional" />
+
+            <div class="flex items-center justify-center text-lg w-full">
+                <p class="mr-1">Pedido: </p>
+                <div class="text-white text-lg" id="pedido"></div>
+            </div>
+
+            <button id="enviar-pedido"
+                class="border-none bg-white text-black rounded-xl py-3 px-6 font-semibold mt-4">Enviar pedido</button>
         </div>
     </div>
 
     <div class="flex flex-col full h-[50dvh] bg-carta w-full">
         <header class="fixed top-0 h-auto w-full text-white flex items-center bg-header justify-center">
 
-            <!-- MENU MBOILE -->
+            <!-- MENU MOBILE -->
             <div class="max-w-7xl py-4 px-4 md:px-8 flex flex-col items-center w-full md:hidden font-raleway">
 
                 <div class="flex justify-between w-full">
@@ -128,7 +156,7 @@
         <section class="w-full h-full flex flex-col items-center justify-center mt-[100px]">
             <article
                 class="max-w-7xl w-full h-full text-white mx-auto flex flex-col items-center justify-center px-4 md:px-8">
-                <h1 class="flex items-center font-bold text-4xl lg:text-5xl 2xl:text-6xl font-bebas tracking-wider">
+                <h1 class="flex items-center font-bold text-5xl 2xl:text-6xl font-bebas tracking-wider">
                     NUESTRO <span class="text-green-500 ml-2">M</span>EN<span class="text-red-500">Ú</span>
                 </h1>
 
@@ -138,18 +166,15 @@
                     <div class="lineas linea-3 bg-red-500" style="width: 33%; height: 3px; "></div>
                 </article>
 
-                <button class="items-center font-mediumbold text-gray-900 rounded-xl bg-white px-3 py-1 justify-center font-bebas text-2xl tracking-wide lg:px-4 lg:py-2 lg:text-3xl bouncing-element mt-[5px] flex hacetupedido">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="-2 -2 24 24"
-                            class="mr-2">
-                            <g fill="#059669">
-                                <path
-                                    d="M9.516.012C4.206.262.017 4.652.033 9.929a9.798 9.798 0 0 0 1.085 4.465L.06 19.495a.387.387 0 0 0 .47.453l5.034-1.184a9.981 9.981 0 0 0 4.284 1.032c5.427.083 9.951-4.195 10.12-9.58C20.15 4.441 15.351-.265 9.516.011zm6.007 15.367a7.784 7.784 0 0 1-5.52 2.27a7.77 7.77 0 0 1-3.474-.808l-.701-.347l-3.087.726l.65-3.131l-.346-.672A7.62 7.62 0 0 1 2.197 9.9c0-2.07.812-4.017 2.286-5.48a7.85 7.85 0 0 1 5.52-2.271c2.086 0 4.046.806 5.52 2.27a7.672 7.672 0 0 1 2.287 5.48c0 2.052-.825 4.03-2.287 5.481z" />
-                                <path
-                                    d="m14.842 12.045l-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903c-.137 1.343.443 3.036 2.637 5.07c2.535 2.349 4.566 2.66 5.887 2.341c.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072" />
-                            </g>
-                    </svg>
-                    HACÉ TU PEDIDO
-                </button>
+                <a href="#Pizzas">
+                    <button
+                        class="items-center font-mediumbold text-gray-900 rounded-xl bg-white px-3 py-1 justify-center font-bebas text-2xl tracking-wide lg:px-4 lg:py-2 lg:text-3xl bouncing-element mt-[5px] flex ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 64 64" class="mr-2">
+                            <g fill="#000" fill-rule="evenodd"><path d="M61.821 11.045c.703-1.309-.891-.912-.891-.912s-10.627 10.201-12.104 8.951S59.231 8.057 57.825 6.23c-1.301-1.703-11.74 10.455-12.994 8.97c-1.242-1.482 8.939-12.123 8.939-12.123s.387-1.602-.912-.9C36.851 10.785 34.812 18.81 34.812 18.81s-.551 1.563.645 2.771c.117.105-29.204 29.26-33.129 33.196c-1.91 1.908 5.098 8.801 6.996 6.893c3.926-3.936 33.024-33.303 33.129-33.194c1.207 1.205 2.766.652 2.766.652s8.012-2.045 16.602-18.083"/><path d="M32.028 40.507c7.803 7.82 20.958 20.999 20.958 20.999s5.742-1.879 6.551-6.729L38.662 33.861a5104 5104 0 0 0-6.634 6.646M21.76 33.729a5059 5059 0 0 0 8.387-8.4L7.459 2.598s-.41-.43-1.313.477C4.353 4.862.884 16.248 15.591 30.977c2.331 2.336 4.359 2.66 6.169 2.752"/></g>
+                        </svg>
+                        HACÉ TU PEDIDO
+                    </button>
+                </a>
             </article>
         </section>
     </div>
@@ -160,9 +185,9 @@
                 class="w-full h-full max-w-[1200px] px-4 md:px-8 py-10 text-white mx-auto bg-[#181818] rounded-xl flex flex-col items-center">
                 <div class="invisible opacity-0" id="pizza"></div>
 
-                <div class="flex justify-evenly w-full gap-2 mb-20">
-                    <a href="#empanada"
-                        class="w-full max-w-[480px] h-auto shadow-2xl p-3 flex flex-col justify-center items-center">
+                <div class="grid grid-cols-2 sm:grid-cols-3 justify-center w-full gap-2 mb-20">
+                    <a href="#Empanadas"
+                        class="w-full max-w-[480px] h-auto p-3 flex flex-col justify-center items-center">
                         <div
                             class="w-full max-w-[480px] h-auto shadow-2xl p-3 flex flex-col justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 32 32">
@@ -378,8 +403,7 @@
                         </div>
                     </a>
 
-                    <a href="#pizza"
-                        class="w-full max-w-[480px] h-auto shadow-2xl p-3 flex flex-col justify-center items-center">
+                    <a href="#Pizzas" class="w-full max-w-[480px] h-auto p-3 flex flex-col justify-center items-center">
                         <div
                             class="w-full max-w-[480px] h-auto shadow-2xl p-3 flex flex-col justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 32 32">
@@ -488,307 +512,76 @@
                         </div>
                     </a>
 
-                    <a href="#calzon"
-                    class="w-full max-w-[480px] h-auto shadow-2xl p-3 flex flex-col justify-center items-center">
-                    <div
-                        class="w-full max-w-[480px] h-auto shadow-2xl p-3 flex flex-col justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 36 36">
-                            <path fill="#FFD983" d="M1.443 13.658c1.03-.715 2.03-1.58 2.285-2.54s3.186-2.313 3.679-1.971c.493.344 1.075.014 1.371-.743s3.476-2.541 4.244-2.093s2.095.028 2.558-.458s3.891-.542 4.29.19s1.061.596 1.857.268c.797-.329 3.266-.289 3.587.391c.321.681 1.161 1.12 1.772.941s2.967.435 2.721 1.324c-.245.889.317 1.531 1.146 1.486c.828-.044 2.3 1.661 2.156 2.085s.418.945.987 1.197s.71 2.529-.863 3.112s-26.976 2.845-28.954.634s-2.836-3.823-2.836-3.823"/><path fill="#FFD983" d="M20.89 12.836c-.48 4.459-3.09 7.96-4.838 7.752s-2.777-3.991-2.297-8.45c.48-4.457 1.589-7.388 3.909-7.388c2.552 0 3.705 3.629 3.226 8.086"/><path fill="#FFD983" d="M25.97 13.193c-.48 4.459-3.09 7.96-4.838 7.752s-2.777-3.991-2.297-8.45c.48-4.457 1.824-5.906 4.036-6.642c2.872-.954 3.579 2.883 3.099 7.34"/><path fill="#FFD983" d="M28.212 15.827c-1.624 4.15-4.101 7.009-5.535 6.388c-1.433-.621-.905-4.346.343-8.636c1.67-5.745 4.58-6.606 6.014-5.985c1.432.62.802 4.084-.822 8.233"/><path fill="#FFD983" d="M29.335 18.306c-2.794 3.391-6.008 5.272-7.179 4.203s.143-4.683 2.936-8.073s6.043-4.557 7.434-3.837c1.924.995-.398 4.317-3.191 7.707"/><path fill="#FFD983" d="M29.232 20.85c-4.118 1.167-7.832.649-8.294-1.159c-.462-1.806 2.499-4.219 6.617-5.386c4.117-1.168 7.544-1.327 8.294 1.159c.539 1.783-2.499 4.219-6.617 5.386m-12.31-8.807c-1.384-4.245-3.912-6.918-6.156-6.013c-2.436.982-2.903 4.693-1.519 8.937c1.382 4.244 5.062 6.961 6.529 6.431s2.53-5.112 1.146-9.355"/><path fill="#FFD983" d="M11.697 13.646c-2.715-3.461-5.176-6.257-7.081-4.385c-1.889 1.857-1.068 5.908 1.647 9.368c2.713 3.461 6.988 4.2 8.184 3.161c1.195-1.037-.035-4.684-2.75-8.144"/><path fill="#FFD983" d="M8.414 14.828c-6.326-2.947-7.706-1.047-8.257.478c-.552 1.524 2.3 5.035 6.285 6.633c3.984 1.6 7.663 1.658 8.215.134c.552-1.523-2.344-5.428-6.243-7.245"/><path fill="#FFD983" d="M35.65 24.036c0 5.312-7.752 7.214-17.315 7.214S.299 28.145.299 22.833S8.772 8.404 18.335 8.404c9.562 0 17.315 10.319 17.315 15.632"/><path fill="#FFAC33" d="M19.537 16.631c0 2.989-.538 5.411-1.202 5.411s-1.202-2.422-1.202-5.411s.538-5.41 1.202-5.41s1.202 2.422 1.202 5.41m4.684-.23c.513 2.533.446 4.683-.148 4.804c-.595.12-1.492-1.834-2.006-4.368c-.513-2.532-.447-4.683.148-4.803s1.492 1.834 2.006 4.367m3.853.223c.945 1.944 1.269 3.734.724 4c-.546.265-1.754-1.095-2.7-3.04c-.945-1.944-1.269-3.734-.724-4c.546-.265 1.754 1.097 2.7 3.04m-13.493-.113c-.646 2.701-1.63 4.78-2.201 4.644s-.51-2.436.134-5.137c.645-2.701 1.738-4.304 2.309-4.167c.572.136.403 1.96-.242 4.66m-4.323.374c-.868 1.94-2.018 3.312-2.573 3.064c-.554-.248-.3-2.02.567-3.961s2.086-2.915 2.64-2.667s.233 1.625-.634 3.564"/><path fill="#FFCC4D" d="M12.865 7.319c.514.603.618 1.387.233 1.751c-.386.364-1.115.169-1.629-.434s-.618-1.387-.233-1.751s1.115-.169 1.629.434m-6.392 3.462c.263.762.082 1.53-.405 1.716s-1.095-.28-1.358-1.042s-.082-1.53.405-1.716s1.095.281 1.358 1.042m-3.492 4.904c.663.572.935 1.378.607 1.799s-1.132.299-1.796-.273c-.663-.572-.935-1.378-.607-1.799s1.133-.299 1.796.273m15.691-9.214c.514.603.618 1.387.233 1.751c-.386.364-1.115.169-1.629-.434s-.618-1.387-.233-1.751s1.115-.17 1.629.434"/><ellipse cx="23.913" cy="7.978" fill="#FFCC4D" rx="1.118" ry="1.668" transform="rotate(-3.242 23.923 7.975)"/><path fill="#FFCC4D" d="M29.092 9.926c.147.795-.147 1.524-.655 1.628s-1.039-.457-1.186-1.252s.147-1.524.655-1.628s1.039.457 1.186 1.252m3.167 3.436c-.333.684-.976 1.038-1.437.79s-.565-1.004-.233-1.688c.333-.684.976-1.038 1.437-.79s.566 1.003.233 1.688m2.285 3.81c-.414.532-1.118.646-1.572.255s-.485-1.14-.071-1.671c.415-.532 1.118-.646 1.572-.255s.485 1.139.071 1.671"/>
-                        </svg>
-                        <p class="text-2xl tracking-wide mt-1 break-words">Calzón</p>
-                    </div>
-                </a>
+                    <a href="#Calzones"
+                        class="w-full max-w-[480px] h-auto  p-3 flex flex-col justify-center items-center col-span-2 sm:col-span-1">
+                        <div
+                            class="w-full max-w-[480px] h-auto shadow-2xl p-3 flex flex-col justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 36 36">
+                                <path fill="#FFD983"
+                                    d="M1.443 13.658c1.03-.715 2.03-1.58 2.285-2.54s3.186-2.313 3.679-1.971c.493.344 1.075.014 1.371-.743s3.476-2.541 4.244-2.093s2.095.028 2.558-.458s3.891-.542 4.29.19s1.061.596 1.857.268c.797-.329 3.266-.289 3.587.391c.321.681 1.161 1.12 1.772.941s2.967.435 2.721 1.324c-.245.889.317 1.531 1.146 1.486c.828-.044 2.3 1.661 2.156 2.085s.418.945.987 1.197s.71 2.529-.863 3.112s-26.976 2.845-28.954.634s-2.836-3.823-2.836-3.823" />
+                                <path fill="#FFD983"
+                                    d="M20.89 12.836c-.48 4.459-3.09 7.96-4.838 7.752s-2.777-3.991-2.297-8.45c.48-4.457 1.589-7.388 3.909-7.388c2.552 0 3.705 3.629 3.226 8.086" />
+                                <path fill="#FFD983"
+                                    d="M25.97 13.193c-.48 4.459-3.09 7.96-4.838 7.752s-2.777-3.991-2.297-8.45c.48-4.457 1.824-5.906 4.036-6.642c2.872-.954 3.579 2.883 3.099 7.34" />
+                                <path fill="#FFD983"
+                                    d="M28.212 15.827c-1.624 4.15-4.101 7.009-5.535 6.388c-1.433-.621-.905-4.346.343-8.636c1.67-5.745 4.58-6.606 6.014-5.985c1.432.62.802 4.084-.822 8.233" />
+                                <path fill="#FFD983"
+                                    d="M29.335 18.306c-2.794 3.391-6.008 5.272-7.179 4.203s.143-4.683 2.936-8.073s6.043-4.557 7.434-3.837c1.924.995-.398 4.317-3.191 7.707" />
+                                <path fill="#FFD983"
+                                    d="M29.232 20.85c-4.118 1.167-7.832.649-8.294-1.159c-.462-1.806 2.499-4.219 6.617-5.386c4.117-1.168 7.544-1.327 8.294 1.159c.539 1.783-2.499 4.219-6.617 5.386m-12.31-8.807c-1.384-4.245-3.912-6.918-6.156-6.013c-2.436.982-2.903 4.693-1.519 8.937c1.382 4.244 5.062 6.961 6.529 6.431s2.53-5.112 1.146-9.355" />
+                                <path fill="#FFD983"
+                                    d="M11.697 13.646c-2.715-3.461-5.176-6.257-7.081-4.385c-1.889 1.857-1.068 5.908 1.647 9.368c2.713 3.461 6.988 4.2 8.184 3.161c1.195-1.037-.035-4.684-2.75-8.144" />
+                                <path fill="#FFD983"
+                                    d="M8.414 14.828c-6.326-2.947-7.706-1.047-8.257.478c-.552 1.524 2.3 5.035 6.285 6.633c3.984 1.6 7.663 1.658 8.215.134c.552-1.523-2.344-5.428-6.243-7.245" />
+                                <path fill="#FFD983"
+                                    d="M35.65 24.036c0 5.312-7.752 7.214-17.315 7.214S.299 28.145.299 22.833S8.772 8.404 18.335 8.404c9.562 0 17.315 10.319 17.315 15.632" />
+                                <path fill="#FFAC33"
+                                    d="M19.537 16.631c0 2.989-.538 5.411-1.202 5.411s-1.202-2.422-1.202-5.411s.538-5.41 1.202-5.41s1.202 2.422 1.202 5.41m4.684-.23c.513 2.533.446 4.683-.148 4.804c-.595.12-1.492-1.834-2.006-4.368c-.513-2.532-.447-4.683.148-4.803s1.492 1.834 2.006 4.367m3.853.223c.945 1.944 1.269 3.734.724 4c-.546.265-1.754-1.095-2.7-3.04c-.945-1.944-1.269-3.734-.724-4c.546-.265 1.754 1.097 2.7 3.04m-13.493-.113c-.646 2.701-1.63 4.78-2.201 4.644s-.51-2.436.134-5.137c.645-2.701 1.738-4.304 2.309-4.167c.572.136.403 1.96-.242 4.66m-4.323.374c-.868 1.94-2.018 3.312-2.573 3.064c-.554-.248-.3-2.02.567-3.961s2.086-2.915 2.64-2.667s.233 1.625-.634 3.564" />
+                                <path fill="#FFCC4D"
+                                    d="M12.865 7.319c.514.603.618 1.387.233 1.751c-.386.364-1.115.169-1.629-.434s-.618-1.387-.233-1.751s1.115-.169 1.629.434m-6.392 3.462c.263.762.082 1.53-.405 1.716s-1.095-.28-1.358-1.042s-.082-1.53.405-1.716s1.095.281 1.358 1.042m-3.492 4.904c.663.572.935 1.378.607 1.799s-1.132.299-1.796-.273c-.663-.572-.935-1.378-.607-1.799s1.133-.299 1.796.273m15.691-9.214c.514.603.618 1.387.233 1.751c-.386.364-1.115.169-1.629-.434s-.618-1.387-.233-1.751s1.115-.17 1.629.434" />
+                                <ellipse cx="23.913" cy="7.978" fill="#FFCC4D" rx="1.118" ry="1.668"
+                                    transform="rotate(-3.242 23.923 7.975)" />
+                                <path fill="#FFCC4D"
+                                    d="M29.092 9.926c.147.795-.147 1.524-.655 1.628s-1.039-.457-1.186-1.252s.147-1.524.655-1.628s1.039.457 1.186 1.252m3.167 3.436c-.333.684-.976 1.038-1.437.79s-.565-1.004-.233-1.688c.333-.684.976-1.038 1.437-.79s.566 1.003.233 1.688m2.285 3.81c-.414.532-1.118.646-1.572.255s-.485-1.14-.071-1.671c.415-.532 1.118-.646 1.572-.255s.485 1.139.071 1.671" />
+                            </svg>
+                            <p class="text-2xl tracking-wide mt-1 break-words">Calzón</p>
+                        </div>
+                    </a>
                 </div>
+    
+                <p class="text-lg text-center mb-2 max-w-[660px]"><span class="font-bold">Aclaracion:</span> La opción de <span class="font-bold">media pizza o medio calzón</span> es <span class="font-bold">SOLO</span> para <span class="font-bold">combinar los tipos de gustos. NO</span> se puede <span class="font-bold">pedir media pizza/calzon individual</span>.</p>
 
-                <div class="flex w-full flex-col items-center mb-20">
-                    <h2 class="font-bold text-3xl md:text-4xl lg:text-5xl">&RightArrow; <span
-                            class="text-green-500">PI</span>ZZ<span class="text-red-500">AS</span> &LeftArrow;</h2>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8">
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/muzza.webp" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px]">
-                            <p class="flex w-full justify-between text-lg md:text-xl text-orange-400 mb-2 items-center">
-                                MUZZA
-                                <span
-                                    class="font-bold lg:text-green-500 p-1 lg:border-green-500 text-white border-white border-[1px]">$6300</span>
-                            </p>
-                            <p class="text-lg"><span class="font-bold">Queso muzzarella</span>, tomate triturado y aceitunas</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/delux.jpeg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px]">
-                            <p class="flex w-full justify-between text-lg md:text-xl text-pink-500 mb-2 items-center">
-                                DELUX
-                                <span class="font-bold text-white p-1 border-white border-[1px]">$6900</span>
-                            </p>
-                            <p class="text-lg">Queso muzzarella, tomate triturado, <span class="font-bold">jamón y morron</span></p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/napoles.webp" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px]">
-                            <p class="flex w-full justify-between text-lg md:text-xl text-cyan-500 mb-2 items-center">
-                                NAPOLES
-                                <span
-                                    class="font-bold lg:text-red-500 p-1 lg:border-red-500 border-white text-white border-[1px]">$6900</span>
-                            </p>
-                            <p class="text-lg">Queso muzzarella, tomate triturado y <span class="font-bold">tomate fresco</span></p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/picapiedra.webp" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px]">
-                            <p class="flex w-full justify-between text-lg md:text-xl text-slate-400 mb-2 items-center">
-                                PICAPIEDRA
-                                <span
-                                    class="font-bold lg:text-green-500 p-1 lg:border-green-500 text-white border-white border-[1px]">$6900</span>
-                            </p>
-                            <p class="text-lg">Queso muzzarella, tomate triturado y <span class="font-bold">huevo duro</span></p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/fuga.webp" alt="pizza" class="rounded-full h-[190px] object-cover fuga w-[190px]">
-                            <p class="flex w-full justify-between text-lg md:text-xl text-yellow-300 mb-2 items-center">
-                                LA FUGA
-                                <span class="font-bold text-white p-1 border-white border-[1px]">$7300</span>
-                            </p>
-                            <p class="text-lg">Queso muzzarella, tomate triturado y <span class="font-bold">cebolla caramelizada</span></p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/proven.webp" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px]">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-green-600 mb-2 items-center">
-                                LA PROVEN
-                                <span
-                                    class="font-bold lg:text-red-500 p-1 lg:border-red-500 border-white text-white border-[1px]">$7300</span>
-                            </p>
-                            <p class="text-lg">Queso muzzarella, tomate triturado, <span class="font-bold">perejíl y ajo</span></p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/milan.jpeg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px]">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-red-500 mb-2 items-center">
-                                MILAN
-                                <span
-                                    class="font-bold lg:text-green-500 p-1 lg:border-green-500 text-white border-white border-[1px]">$7300</span>
-                            </p>
-                            <p class="text-lg">Queso muzzarella, tomate triturado y <span class="font-bold">milan</span></p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/calabria.webp" alt="pizza" class="rounded-full h-[190px] fuga object-cover w-[190px]">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-pink-500 mb-2 items-center">
-                                CALABRIA
-                                <span class="font-bold text-white p-1 border-white border-[1px]">$8100</span>
-                            </p>
-                            <p class="text-lg">Queso muzzarella, tomate triturado y <span class="font-bold">longaniza</span></p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/ruchetom.webp" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px]">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-green-600 mb-2 items-center">
-                                RÚCHETOM
-                                <span
-                                    class="font-bold lg:text-red-500 p-1 lg:border-red-500 border-white text-white border-[1px]">$8100</span>
-                            </p>
-                            <p class="text-lg">Queso muzzarella, tomate triturado, <span class="font-bold">rúcula y tomate cherry</span></p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-[350px] max-w-[320px] rounded-lg flex flex-col justify-between items-center mt-4">
-                            <img src="assets/lareina.webp" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px]">
-
-                        <div class="invisible opacity-0" id="empanada"></div>
-                            <p class="flex w-full justify-between text-lg md:text-xl text-pink-500 mb-2 items-center">
-                                LA REINA
-                                <span
-                                    class="font-bold lg:text-green-500 p-1 lg:border-green-500 text-white border-white border-[1px]">$8700</span>
-                            </p>
-                            <p class="text-lg">Queso muzzarella, tomate triturado, <span class="font-bold">huevo frito y papas fritas</span></p>
-                        </div>
-
-                        <div
-                        class="shadow-2xl p-4 max-w-[320px] h-[350px] rounded-lg flex flex-col justify-between items-center mt-4">
-                        <img src="assets/capresse-pizza.jpeg" alt="pizza" class="rounded-full fuga h-[190px] object-cover w-[190px]">
-
-                        <p class="flex w-full justify-between text-lg md:text-xl text-green-400 mb-2 items-center">
-                            CAPRESSE
-                            <span class="font-bold text-white p-1 border-white border-[1px]">$8100</span>
-                        </p>
-                        <p class="text-lg">Queso muzzarella, tomate triturado, <span class="font-bold">albahaca y tomates cherry</span></p>
-                        </div>
+                <div class="flex w-full flex-col-reverse items-center mb-20" id="Pizzas">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8" id="shopContentPizzas">
                     </div>
                 </div>
 
-                <div class="flex w-full flex-col items-center mb-20">
-                    <h2 class="font-bold text-3xl md:text-4xl lg:text-5xl">
-                        &RightArrow;
-                        <span class="text-cyan-500">EM</span><span class="text-white">PA</span><span
-                            class="text-yellow-500">N</span><span class="text-white">AD</span><span
-                            class="text-cyan-500">AS</span>
-                        &LeftArrow;
-                    </h2>
-                    <p class="text-light">(Fritas o al horno)</p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4">
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-between mt-4">
-                            <img src="assets/jyq.jpeg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-pink-400 mb-2 items-center">
-                                JAMÓN Y QUESO
-                                <span
-                                    class="font-bold lg:text-cyan-500 p-1 lg:border-cyan-500 text-white border-white border-[1px] ml-1">$8900
-                                    <span class="text-white font-light">doc.</span></span>
-                            </p>
-                            <p class="text-lg">$5000 Media, $900 c/u (comprando menos de media)</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-between mt-4">
-                            <img src="assets/pollo.jpeg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-orange-400 mb-2 items-center">
-                                POLLO (picada)
-                                <span class="font-bold p-1 text-white border-white border-[1px]">$8900 <span
-                                        class="text-white font-light">doc.</span></span>
-                            </p>
-                            <p class="text-lg">$5000 Media, $900 c/u (comprando menos de media)</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-between mt-4">
-                            <img src="assets/verdura.webp" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-lime-700 mb-2 items-center">
-                                VERDURA
-                                <span
-                                    class="font-bold lg:text-cyan-500 p-1 lg:border-cyan-500 text-white border-white border-[1px]">$9900
-                                    <span class="text-white font-light">doc.</span></span>
-                            </p>
-                            <p class="text-lg">$5700 Media, $1000 c/u (comprando menos de media)</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-between mt-4">
-                            <img src="assets/cebollayqueso.jpeg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-yellow-400 mb-2 items-center">
-                                CEBOLLA Y QUESO
-                                <span
-                                    class="font-bold lg:text-cyan-500 p-1 lg:border-cyan-500 text-white border-white border-[1px] ml-1">$8500
-                                    <span class="text-white font-light">doc.</span></span>
-                            </p>
-                            <p class="text-lg">$4700 Media, $870 c/u (comprando menos de media)</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-between mt-4">
-                            <img src="assets/nosesabe.webp" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-red-700 mb-2 items-center">
-                                CARNE
-                                <span class="font-bold p-1 text-white border-white border-[1px] ml-1">$9500 <span
-                                        class="text-white font-light">doc.</span></span>
-                            </p>
-                            <p class="text-lg">$5700 Media, $970 c/u (comprando menos de media)</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-between mt-4">
-                            <img src="assets/capresse.webp" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-green-400 mb-2 items-center">
-                                CAPRESSE
-                                <span
-                                    class="font-bold lg:text-cyan-500 p-1 lg:border-cyan-500 text-white border-white border-[1px] ml-1">$9500
-                                    <span class="text-white font-light">doc.</span></span>
-                            </p>
-                            <p class="text-lg">$5700 Media, $970 c/u (comprando menos de media)</p>
-                        </div>
+                <div class="flex w-full flex-col-reverse items-center mb-20" id="Empanadas">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8" id="shopContentEmpanadas">
                     </div>
                 </div>
 
-                <div class="flex w-full flex-col items-center" id="calzon">
-                    <h2 class="font-bold text-3xl md:text-4xl lg:text-5xl">
-                        &RightArrow; 
-                        <span class="text-green-500">CAL</span>ZO<span class="text-red-500">NES</span> 
-                        &LeftArrow;
-                    </h2>
-                    <p class="text-light text-center">(Todos con terminacion de muzza y aceitunas)</p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4">
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-evenly mt-4">
-                            <img src="assets/calzonclasico.jpg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-pink-400 items-center">
-                                CLÁSICO
-                                <span
-                                    class="font-bold lg:text-green-500 p-1 lg:border-green-500 text-white border-white border-[1px] ml-1">$10500</span>
-                            </p>
-                            <p class="text-lg">Salsa, muzzarella y jamón</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-evenly mt-4">
-                            <img src="assets/calzoncarne.jpg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-orange-400 items-center">
-                                Verdura
-                                <span class="font-bold p-1 text-white border-white border-[1px]">$10500</span>
-                            </p>
-                            <p class="text-lg">Salsa, muzzarella y acelga</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-evenly mt-4">
-                            <img src="assets/calzoncarne.jpg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-lime-700 items-center">
-                                CEBOLLA
-                                <span
-                                    class="font-bold lg:text-red-500 p-1 lg:border-red-500 text-white border-white border-[1px]">$11000</span>
-                            </p>
-                            <p class="text-lg">Salsa, muzzarella y cebolla caramelizada</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-evenly mt-4">
-                            <img src="assets/calzoncarne.jpg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-yellow-400 items-center">
-                                CARNE
-                                <span
-                                    class="font-bold lg:text-green-500 p-1 lg:border-green-500 text-white border-white border-[1px] ml-1">$11900</span>
-                            </p>
-                            <p class="text-lg">Salsa, muzzarella y carne picada</p>
-                        </div>
-
-                        <div
-                            class="shadow-2xl p-4 h-auto max-w-[340px] rounded-lg flex flex-col justify-evenly mt-4">
-                            <img src="assets/calzoncarne.jpg" alt="pizza" class="rounded-full h-[190px] object-cover w-[190px] mx-auto">
-
-                            <p class="flex w-full justify-between text-lg md:text-xl text-red-700 items-center">
-                                CAPRESSE
-                                <span class="font-bold p-1 text-white border-white border-[1px] ml-1">$11900</span>
-                            </p>
-                            <p class="text-lg">Salsa, muzzarella, cherry y albahaca</p>
-                        </div>
+                <div class="flex w-full flex-col-reverse items-center mb-20" id="Calzones">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8" id="shopContentCalzones">
                     </div>
                 </div>
 
+                <!--cart btn-->
+                <div class="cart-btn" id="cart-btn">
+                    🛒
+                </div>
+                <!--cart counter-->
+                <span class="cart-counter" id="cart-counter">0</span>
+
+                <div class="modal-hacetupedido fixed top-[15%] bg-[#191919] text-white px-4 py-12 rounded-lg w-full max-w-[420px] max-h-[70vh] overflow-y-auto z-[10005] flex-col items-center justify-between gap-y-4 hidden">
+                    <p>Llená tu carrito y pedí ya!</p>
+                </div>
+
+                <!--modal-->
+                <div class="modal-overlay z-[10001]" id="modal-overlay"></div>
+                <div class="modal-container text-white bg-[#181818] z-[10002] rounded-lg w-full" id="modal-container">
+                    <div id="button-checkout"></div>
+                </div>
             </article>
         </section>
     </main>
@@ -829,7 +622,9 @@
             </div>
         </div>
     </footer>
-
+    <script src="js/productsPizzas.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/shopContPizzas.js"></script>
     <script src="js/index.js" type="module"></script>
 </body>
 
