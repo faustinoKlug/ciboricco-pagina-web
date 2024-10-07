@@ -95,54 +95,48 @@ const displayCart = () => {
       mediaCheckbox.addEventListener('change', () => {
         if (mediaCheckbox.checked) {
           if (unitCheckbox) unitCheckbox.checked = false;
-          product.price = product.originalPrice / 2; 
           product.productType = "Media";
+          
+          switch (product.id) {
+            case 12: // JAMÓN Y QUESO
+            case 13: // POLLO
+              product.price = 5000;
+              break;
+            case 14: // VERDURA
+            case 16: // CARNE
+            case 17: // CAPRESSE
+              product.price = 5700;
+              break;
+            case 15: // CEBOLLA Y QUESO
+              product.price = 4700;
+              break;
+            default:
+              product.price = product.originalPrice / 2;
+          }
         } else {
           if (!unitCheckbox?.checked) {
-            product.price = product.originalPrice; 
+            product.price = product.originalPrice;
             product.productType = product.productCart.includes("EMPANADA") ? "Docena" : "Entera";
           }
         }
         updatePrice(priceElement, product);
-        updateTotal(); 
+        updateTotal();
       });
 
       if (unitCheckbox) {
         unitCheckbox.addEventListener('change', () => {
           if (unitCheckbox.checked) {
-            mediaCheckbox.checked = false; 
+            mediaCheckbox.checked = false;
             product.productType = "Unidad";
-
-            switch (product.id) {
-              case 12: // JYQ
-                product.price = 900;
-                break;
-              case 13: // POLLO
-                product.price = 900;
-                break;
-              case 14: // VERDURA
-                product.price = 1000;
-                break;
-              case 15: // CEBOLLA Y QUESO
-                product.price = 870;
-                break;
-              case 16: // CARNE
-                product.price = 970;
-                break;
-              case 17: // CAPRESSE
-                product.price = 970;
-                break;
-              default:
-                product.price = product.originalPrice; 
-            }
+            // Add prices for unit option if necessary
           } else {
             if (!mediaCheckbox?.checked) {
-              product.price = product.originalPrice; 
+              product.price = product.originalPrice;
               product.productType = product.productCart.includes("EMPANADA") ? "Docena" : "Entera";
             }
           }
           updatePrice(priceElement, product);
-          updateTotal(); 
+          updateTotal();
         });
       }
 
@@ -153,7 +147,7 @@ const displayCart = () => {
         }
         displayCart();
         displayCartCounter();
-        updateTotal(); 
+        updateTotal();
       });
 
       const increse = modalBody.querySelector(".quantity-btn-increse");
@@ -163,7 +157,7 @@ const displayCart = () => {
         }
         displayCart();
         displayCartCounter();
-        updateTotal(); 
+        updateTotal();
       });
 
       const deleteProduct = modalBody.querySelector(".delete-product");
@@ -191,7 +185,7 @@ const displayCart = () => {
       let pedidoText = '';
 
       cart.forEach((product) => {
-        pedidoText += `${product.productCart} (x${product.quanty} ${product.productType || "Entera"})\n`; 
+        pedidoText += `${product.productCart} (x${product.quanty} ${product.productType || "Entera"})\n`;
       });
 
       pedidoInput.innerHTML = pedidoText;
