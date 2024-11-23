@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es" class="overflow-x-hidden scroll-smooth">
+
+<head>
+    <title>Pizzas caseras en Concepción del Uruguay | CIBO RICCO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link href="./hamburgers.css" rel="stylesheet">
+    <link rel="icon" href="assets/logo2.webp">
+    <link rel="author" content="Faustino Klug">
+    <link rel="canonical" href="https://ciboricco.netlify.app">
+    <meta name="title" content="Pizzería Casera en Concepción del Uruguay - CIBO RICCO">
+    <meta name="description" content="Disfrutá de las mejores pizzas caseras en Concepción del Uruguay. Hechas con ingredientes frescos, ofrecemos delivery y retiro personal de miércoles a domingo. ¡Hacé tu pedido ahora!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ciboricco.netlify.app">
+    <meta property="og:title" content="Pizzería Casera en Concepción del Uruguay - CIBO RICCO">
+    <meta property="og:description" content="Las pizzas más ricas y caseras en Concepción del Uruguay. Pedido fácil y rápido, ¡entregamos a domicilio o retiras en nuestro local!">
+    <meta property="og:image" content="https://ciboricco.netlify.app/assets/logo2.webp">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ciboricco.netlify.app">
+    <meta property="twitter:title" content="Pizzería Casera en Concepción del Uruguay - CIBO RICCO">
+    <meta property="twitter:description" content="Probá nuestras pizzas caseras hechas con amor y pasión. Delivery y retiro personal disponibles en Concepción del Uruguay.">
+    <meta property="twitter:image" content="https://ciboricco.netlify.app/assets/logo2.webp">
+
+</head>
+
+<body class="overflow-x-hidden font-raleway flex flex-col justify-between items-center relative">
+    <div class="bg-hero bg-contain h-dvh w-full relative">
+        <header class="fixed top-0 h-auto w-full text-white flex items-center bg-header justify-center">
+
+            <!-- MENU MBOILE -->
+            <div class="max-w-7xl py-4 px-4 md:px-8 flex flex-col items-center w-full md:hidden font-raleway">
+
+                <div class="flex justify-between w-full">
+                    <!-- LOGO -->
+                    <div class="flex items-center gap-x-2">
+                        <img src="assets/logo2.webp" alt="logo" width="70" height="70">
+                        <p class="font-bebas text-3xl font-semibold tracking-wide">
+                            CIBO RICCO<br><span class="text-green-500">Piz</span>ze<span class="text-red-500">ría</span>
+                        </p>
+                    </div>
+
+                    <!-- BTN HAMBURGER -->
+                    <div class="flex items-center menu-hamb">
+                        <button class="hamburger hamburger--squeeze" type="button" id="boton">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- NAV -->
+                <nav class="hidden pt-4 pb-2 w-full nav-mobile">
+                    <ul class="flex flex-col text-center gap-y-6 text-lg w-full">
+                        <a href="#inicio" class="bg-nav p-1 anchor-nav">
+                            <li>Inicio</li>
+                        </a>
+                        <a href="#sobre-nosotros" class="bg-nav p-1 anchor-nav">
+                            <li>Sobre nosotros</li>
+                        </a>
+                        <a href="#informacion" class="bg-nav p-1 anchor-nav">
+                            <li>Información</li>
+                        </a>
+                        <a href="menu.html" class="bg-nav p-1 anchor-nav">
+                            <li>Menú</li>
+                        </a>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <!-- MENU DESKTOP -->
+            <div class="hidden py-2 md:flex justify-between items-center font-raleway w-full max-w-7xl px-4 md:px-8 ">
+
+                <!-- LOGO -->
+                <div class="flex items-center gap-x-2">
+                    <img src="assets/logo2.webp" alt="logo" width="90" height="70">
+                    <p class="font-bebas text-3xl font-semibold tracking-wide">
+                        CIBO RICCO<br><span class="text-green-500">Piz</span>ze<span class="text-red-500">ría</span>
+                    </p>
+                </div>
+
+                <!-- NAV -->
+                <nav>
+                    <ul class="flex gap-x-12 text-lg">
+                        <li><a href="#inicio" class="hovAnim">Inicio</a></li>
+                        <li><a href="#sobre-nosotros" class="hovAnim">Sobre nosotros</a></li>
+                        <li><a href="#informacion" class="hovAnim">Información</a></li>
+                        <li><a href="menu.html" class="hovAnim">Menú</a></li>
+
+                    </ul>
+                </nav>
+
+                <!-- BUTTON
+                <a href="#" class="hidden items-center mr-2 lg:flex">
+                    <button class="btnreserva font-bold text-lg h-auto px-6 py-3 rounded-md">
+                        HACÉ TU PEDIDO
+                    </button>
+                </a> -->
+
+            </div>
+
+        </header>
+
+        <section class="w-full h-full" id="inicio">
+            <article
+                class="w-full h-full mx-auto max-w-7xl px-4 md:px-8 flex items-center justify-center lg:items-end flex-col text-white">
+                <h1
+                    class="text-5xl font-bold font-bebas tracking-wider text-center flex items-center lg:text-left sm:text-6xl md:text-7xl lg:items-start">
+                    CIBO RICCO
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 128 128">
+                        <path fill="#FF8E00"
+                            d="M20.24 47.26s-5.48 3.45-6.11 6.89c-.63 3.45.63 7.52 2.35 10.18s3.76 4.86 6.27 5.8s4.7.78 4.7.78s5.8 6.58 16.13 15.51S67.08 106 81.96 114.3s20.21 10.34 24.28 10.34s3.92-6.11 3.45-7.99s-26.63-31.01-26.63-31.01z" />
+                        <path fill="#F5B03E"
+                            d="m31.21 62.46l-3.92-4.23s-4.07-7.68-7.83-7.68s-5.33 3.6-5.33 3.6s-.47-3.92 4.23-11.43s10.65-13.47 15.98-17.23s11.9-8.15 16.29-10.65S64.57 9.2 70.06 7.32c5.48-1.88 17.39-4.23 22.87-3.13s7.83 4.86 7.83 8.77s-.94 6.58-1.72 7.36s-5.95 5.17-5.95 5.17z" />
+                        <path fill="#FFCC8A"
+                            d="m42.2 45.95l-9.71 6.27l-4.07 7.99s.78 2.66 2.04 4.07c1.25 1.41 11.74 11.46 19.25 17.88c5.86 5.01 18.35 15.64 18.35 15.64s.51 5.34 1.1 9.09c.47 2.98.5 7.95 3.64 7.81c3.96-.18 1.68-8.2 4.82-8.12c6.27.16.05 17.12 6.79 17.03c5.37-.07 1.96-9.34 4.65-10.92c1.46-.86 4.36 2.79 9.09 4.86c5.84 2.55 9.4 4.48 11.28 3.6c3.97-1.86-4.4-45.23-5.34-52.59s-5.62-45.16-5.94-46.41s-6.74-1.41-6.74-1.41l-9.87 3.45l-14.1 1.88l-16.6 9.87z" />
+                        <path fill="#CB6C22"
+                            d="M39.75 44.38c-3.08 1.74-7.05 2.71-10.4 8.23c-2.79 4.6-3.53 9.31-1.54 9.67s3.5-6.58 6.15-9.22c4.25-4.25 7.69-4.7 10.13-6.96s5.11-8.4 15.28-13.83c11.85-6.33 18.93-4.66 21.7-5.7c3.62-1.36 4.6-3.58 9.13-4.52c4.79-.99 8.12.92 8.12.92s1.09-2.53-.36-3.71s-4.12-2.1-8.58-1.19c-4.88.99-8.5 4.25-9.49 4.34s-11.12-.45-23.15 6.42s-14.28 14.01-16.99 15.55" />
+                        <path fill="#DB0D27"
+                            d="M53.58 55.32L37.4 58.85s-.25 3.07-.09 3.98c.54 3.07 4.61 7.96 7.05 8.77s7.41.9 9.04.18s6.51-4.25 7.14-6.15s.46-9.85-.8-11.12c-1.26-1.26-6.16.81-6.16.81" />
+                        <path fill="#ED6D30"
+                            d="M42.19 50.26c-1.73 1.34-5.06 5.88-4.79 9.13c.27 3.26 5.88 8.95 7.41 9.49s6.51.63 7.78.27s6.15-3.98 6.87-5.24c.72-1.27 1.36-8.32.18-9.58s-4.7-4.97-7.5-5.79c-2.81-.81-8.32.45-9.95 1.72" />
+                        <path fill="#DB0D27"
+                            d="M83.6 65.45s-14.32-1.03-14.5-.13s-.51 4.38.4 7.18c.64 1.99 2.17 5.43 6.87 7.41s9.22-.18 10.4-1.09c2.21-1.7 3.62-3.8 3.98-5.06s-7.15-8.31-7.15-8.31" />
+                        <path fill="#ED6D30"
+                            d="M76.64 57.94c-2.21.8-7.5 4.07-7.6 7.69c-.09 3.62 2.53 8.05 3.89 9.04s5.88 3.62 9.22 3.44c3.35-.18 7.96-2.89 8.59-4.34s.9-5.7.63-7.87s-4.97-7.05-7.32-7.78c-2.35-.72-5.42-.9-7.41-.18" />
+                        <path fill="#DB0D27"
+                            d="M76.1 91.76s-13.11-3.62-13.29-3.35s-1.99 2.53-1.54 3.62s5.06 4.79 6.96 6.42s7.64 5 8.32 4.88c1.63-.27 2.89-2.89 2.89-2.89z" />
+                        <path fill="#ED6D30"
+                            d="M77.27 86.24c-3.2-2.35-7.87-2.17-10.4-.99s-4.07 2.71-4.34 3.89s1.82 3.45 2.64 4.08c.81.63 3.27 2.49 3.27 2.49s3.65 2.86 5 3.9c1.88 1.45 4.24 2.27 4.87 2.36s3.57-3.71 3.03-8.78c-.28-2.59-1.38-4.97-4.07-6.95" />
+                        <path fill="#DB0D27"
+                            d="m100.06 79.01l-4.88-.18s-1.99 3.71-.63 7.87c1.11 3.4 3.44 5.43 7.32 6.51c3.89 1.09 6.06.7 6.06.7l.06-2.73z" />
+                        <path fill="#ED6D30"
+                            d="M104.76 72.77s-6.02-.71-9.13 4.88c-2.38 4.29-.72 7.87 1.18 9.95s4.79 3.44 6.96 3.62s4.27.01 4.27.01s-.84-5.55-1.66-10.19c-.5-2.78-1.62-8.27-1.62-8.27" />
+                        <path fill="#DB0D27"
+                            d="M87.22 33.62s-11.66.36-12.39 1.54s-.72 6.42-.36 8.5s3.53 7.14 9.86 7.23s8.56-1.49 11.02-6.27s-.1-10.13-.1-10.13z" />
+                        <path fill="#ED6D30"
+                            d="M87.31 28.28c-2.53-.49-6.06.54-7.78 1.72s-4.52 3.62-4.7 5.43s1.45 7.05 2.08 8.05c.63.99 3.25 3.68 4.07 4.07c1.9.9 7.14.45 8.68-.09s5.79-3.98 6.24-5.79s.99-4.88-1.09-8.59s-5.15-4.34-7.5-4.8" />
+                        <path fill="#DB0D27"
+                            d="m103.78 104.17l-10.41-.45s-1.4 2.81-.98 5.27c.34 2.04 2.03 4.82 5.06 5.99c1.72.66 6.22.23 7.32-.52c2.22-1.52 2.93-4.28 2.86-5.7c-.03-.74-3.85-4.59-3.85-4.59" />
+                        <path fill="#ED6D30"
+                            d="M101.51 99.75c-2.7-.41-5.81 1.05-7.15 2.44s-1.61 3.13-1.1 5.23c.93 3.84 3.39 4.93 4.53 5.52c1.69.87 6.33.7 7.79-.41c1.45-1.1 2.55-2.98 2.21-5.87c-.35-2.9-1.63-6.21-6.28-6.91" />
+                        <path fill="#FCC12B"
+                            d="M36 31.03c.09 2.16 3.87 1.79 5.36 1.64c1.19-.12 4.17-.37 4.17-2.31s-2.6-1.93-4.54-1.86c-1.87.07-5.07.82-4.99 2.53m20.31-12.72c0 1.42 1.56 1.56 2.53 1.64c.97.07 2.23-.3 2.31-1.41c.07-1.12-.89-1.79-2.31-1.86c-1.49-.09-2.53.43-2.53 1.63m9.3 3.42c1.43 1.55 3.57-.52 4.32-1.49c.74-.97.89-2.46.07-3.2s-2.38.07-3.42 1.04s-1.86 2.68-.97 3.65m16.15-7.89c1.74 1.97 4.61-1.34 5.8-2.46s2.16-2.68 1.04-3.94s-3.65.52-4.61 1.64c-.97 1.11-3.35 3.5-2.23 4.76M26.92 47.25c1.69.4 2.24-1.6 2.53-3.13c.3-1.56.3-3.05-.97-3.27c-1.44-.25-2.23 1.19-2.46 2.6c-.19 1.27-.66 3.43.9 3.8" />
+                    </svg>
+                </h1>
+                <p
+                    class="text-center text-2xl max-w-[400px] sm:text-3xl xl:text-4xl lg:text-right md:max-w-[500px] mt-1 mb-2 lg:mb-3">
+                    Tu nueva
+                    <span class="font-bold">
+                        <span class="text-green-500">PIZ</span>ZE<span class="text-red-500">RÍA</span>
+                    </span> favorita.
+
+                </p>
+                <a href="menu.html#Pizzas">
+                    <button
+                        class="items-center font-mediumbold text-gray-900 rounded-xl bg-white px-3 py-1 justify-center font-bebas text-2xl tracking-wide lg:px-4 lg:py-2 lg:text-3xl bouncing-element mt-[5px] flex ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 64 64" class="mr-2">
+                            <g fill="#000" fill-rule="evenodd"><path d="M61.821 11.045c.703-1.309-.891-.912-.891-.912s-10.627 10.201-12.104 8.951S59.231 8.057 57.825 6.23c-1.301-1.703-11.74 10.455-12.994 8.97c-1.242-1.482 8.939-12.123 8.939-12.123s.387-1.602-.912-.9C36.851 10.785 34.812 18.81 34.812 18.81s-.551 1.563.645 2.771c.117.105-29.204 29.26-33.129 33.196c-1.91 1.908 5.098 8.801 6.996 6.893c3.926-3.936 33.024-33.303 33.129-33.194c1.207 1.205 2.766.652 2.766.652s8.012-2.045 16.602-18.083"/><path d="M32.028 40.507c7.803 7.82 20.958 20.999 20.958 20.999s5.742-1.879 6.551-6.729L38.662 33.861a5104 5104 0 0 0-6.634 6.646M21.76 33.729a5059 5059 0 0 0 8.387-8.4L7.459 2.598s-.41-.43-1.313.477C4.353 4.862.884 16.248 15.591 30.977c2.331 2.336 4.359 2.66 6.169 2.752"/></g>
+                        </svg>
+                        HACÉ TU PEDIDO
+                    </button>
+                </a>
+            </article>
+        </section>
+    </div>
+
+    <main class="w-full h-full bg-negrito flex flex-col items-center">
+        <section class="w-full flex justify-center text-white bg-negrito pt-16 md:pt-24 lg:pt-28 xl:pt-32"
+            id="sobre-nosotros">
+            <article class="w-full h-full max-w-7xl mx-auto flex items-center justify-center flex-col px-4 md:px-8">
+
+                <div class="flex flex-col items-center mb-7 w-full">
+                    <h2 class="font-bebas flex items-center text-4xl lg:text-5xl 2xl:text-6xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" class="mr-2">
+                            <circle cx="9" cy="8" r="2" fill="#fff" opacity=".3" />
+                            <path fill="#fff" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2"
+                                opacity=".3" />
+                            <path fill="#fff"
+                                d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z" />
+                        </svg>
+                        Sobre <span class="text-green-500 ml-2">Nos</span>ot<span class="text-red-500">ros</span>
+                    </h2>
+
+                    <h3 class="text-lg text-center sm:text-xl lg:text-2xl 2xl:text-3xl">
+                        ¡Bienvenidos a CIBO RICCO!
+                    </h3>
+                </div>
+
+                <div class="flex flex-col items-center lg:flex-row lg:justify-between w-full">
+                    <div class="w-auto">
+                        <p
+                            class="text-lg sm:text-xl max-w-[500px] md:max-w-[550px] xl:text-2xl xl:text-[21px] xl:max-w-[600px] ">
+                            En el corazón de <span class="font-bold">Concepción del Uruguay</span>, <span
+                                class="font-bold">CIBO RICCO</span> es más que una <span
+                                class="font-bold">pizzería</span>: es un rincón donde el amor por la cocina se fusiona
+                            con <span class="font-bold">ingredientes de primera calidad</span>. Somos Sebastián y
+                            Macarena, una pareja apasionada por <span class="font-bold">crear sabores auténticos</span>
+                            que despiertan el calor del hogar. Cada pizza y empanada que sale de nuestro horno está
+                            elaborada con <span class="font-bold">dedicación, frescura</span> y ese <span
+                                class="font-bold">toque casero</span> que hace la <span
+                                class="font-bold">diferencia</span>. Queremos que, al probar nuestra comida, sientas el
+                            cariño con el que la preparamos y te transportes a un lugar donde lo artesanal se encuentra
+                            con lo exquisito.
+                        </p>
+                    </div>
+
+                    <div class="mt-7 md:mt-0">
+                        <h3
+                            class="font-bebas tracking-wider text-center flex items-center text-3xl justify-center sm:text-4xl lg:text-5xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"
+                                class="mr-2">
+                                <path fill="#fff"
+                                    d="M12 10a4 4 0 1 0 0-8a4 4 0 0 0 0 8m-6.5 3a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5M21 10.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0m-9 .5a5 5 0 0 1 5 5v6H7v-6a5 5 0 0 1 5-5m-7 5c0-.693.1-1.362.288-1.994l-.17.014A3.5 3.5 0 0 0 2 17.5V22h3zm17 6v-4.5a3.5 3.5 0 0 0-3.288-3.494c.187.632.288 1.301.288 1.994v6z" />
+                            </svg>
+                            El <span class="text-green-500 ml-2">Eq</span>ui<span class="text-red-500 mr-2">po</span> de
+                            CIBO RICCO
+                        </h3>
+                        <h3 class="text-center text-xl 2xl:text-2xl">
+                            Quienes hacemos CIBO RICCO
+                        </h3>
+
+                        <div class="flex flex-col sm:flex-row sm:mt-4">
+                            <div class="flex flex-col items-center mb-4 sm:mb-0 sm:mr-4 lg:mr-8">
+                                <img src="assets/seba.webp" alt="seba" width="200" height="200"
+                                    class="rounded-full w-[220px] h-[220px] object-cover mb-2 border-[6px] border-negrito">
+                                <p
+                                    class="font-bebas font-medium text-2xl tracking-wider flex items-center 2xl:text-3xl">
+                                    Sebastián Dacuez
+                                    <a href="https://www.instagram.com/sebadacuez/" target="_blank" rel="noopenner"
+                                        class="hover:scale-[105%] transition-all">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            viewBox="0 0 256 256" class="ml-2">
+                                            <g fill="">
+                                                <rect width="256" height="256" fill="url(#IconifyId191436b1a2f7de8830)"
+                                                    rx="60" />
+                                                <rect width="256" height="256" fill="url(#IconifyId191436b1a2f7de8831)"
+                                                    rx="60" />
+                                                <path fill="#fff"
+                                                    d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396s-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413s.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5s6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355s22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334s-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334" />
+                                                <defs>
+                                                    <radialGradient id="IconifyId191436b1a2f7de8830" cx="0" cy="0" r="1"
+                                                        gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)"
+                                                        gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#FD5" />
+                                                        <stop offset=".1" stop-color="#FD5" />
+                                                        <stop offset=".5" stop-color="#FF543E" />
+                                                        <stop offset="1" stop-color="#C837AB" />
+                                                    </radialGradient>
+                                                    <radialGradient id="IconifyId191436b1a2f7de8831" cx="0" cy="0" r="1"
+                                                        gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)"
+                                                        gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#3771C8" />
+                                                        <stop offset=".128" stop-color="#3771C8" />
+                                                        <stop offset="1" stop-color="#60F" stop-opacity="0" />
+                                                    </radialGradient>
+                                                </defs>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col items-center">
+                                <img src="assets/macarena.webp" alt="seba" width="200" height="200"
+                                    class="rounded-full w-[220px] h-[220px] object-cover mb-2 border-[6px] border-negrito">
+                                <p
+                                    class="font-bebas font-medium text-2xl tracking-wider flex items-center 2xl:text-3xl">
+                                    Macarena Rodríguez
+                                    <a href="https://www.instagram.com/macarodrgz/" target="_blank" rel="noopenner"
+                                        class="hover:scale-[105%] transition-all">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            viewBox="0 0 256 256" class="ml-2">
+                                            <g fill="none">
+                                                <rect width="256" height="256" fill="url(#IconifyId191436b1a2f7de8830)"
+                                                    rx="60" />
+                                                <rect width="256" height="256" fill="url(#IconifyId191436b1a2f7de8831)"
+                                                    rx="60" />
+                                                <path fill="#fff"
+                                                    d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396s-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413s.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5s6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355s22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334s-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334" />
+                                                <defs>
+                                                    <radialGradient id="IconifyId191436b1a2f7de8830" cx="0" cy="0" r="1"
+                                                        gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)"
+                                                        gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#FD5" />
+                                                        <stop offset=".1" stop-color="#FD5" />
+                                                        <stop offset=".5" stop-color="#FF543E" />
+                                                        <stop offset="1" stop-color="#C837AB" />
+                                                    </radialGradient>
+                                                    <radialGradient id="IconifyId191436b1a2f7de8831" cx="0" cy="0" r="1"
+                                                        gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)"
+                                                        gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#3771C8" />
+                                                        <stop offset=".128" stop-color="#3771C8" />
+                                                        <stop offset="1" stop-color="#60F" stop-opacity="0" />
+                                                    </radialGradient>
+                                                </defs>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section
+            class="w-full bg-menu bg-cover bg-no-repeat bg-center bg-faixed h-[40dvh] my-16 md:my-24 lg:my-28 xl:my-32 border-t-[10px] border-b-[10px] border-[#191919] flex justify-center items-center">
+            <article
+                class="w-full h-full mx-auto max-w-7xl px-4 md:px-8 flex flex-col items-center justify-center text-white">
+                <h2 class="text-center text-3xl mb-1 font-bold md:text-4xl xl:text-5xl xl:text-[40px]">
+                    ¡Accedé a nuestro
+                    <span class="font-bold"><span class="text-green-500">M</span>EN<span
+                            class="text-red-500">Ú</span></span>!
+                </h2>
+                <article class="flex justify-center mx-auto gap-2 my-1" style="width: 100px;">
+                    <div class="lineas linea-1 bg-green-500" style="width: 33%; height: 3px; "></div>
+                    <div class="lineas linea-2 bg-white" style="width: 33%; height: 3px; "></div>
+                    <div class="lineas linea-3 bg-red-500" style="width: 33%; height: 3px; "></div>
+                </article>
+                <a href="menu.html" class="bouncing-element sm:mt-2">
+                    <button
+                        class="flex items-center font-mediumbold text-gray-900 rounded-xl bg-white px-4 py-2 justify-center font-bebas text-2xl tracking-wide lg:px-5 lg:py-3 lg:text-3xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 569 680"
+                            class="mr-2">
+                            <path fill="#000000"
+                                d="M201 248V14h67v268c0 37-30 68-67 68v296c0 18-15 34-34 34h-67c-18 0-33-16-33-34V350c-37 0-67-31-67-68V14h67v234h33V14h67v234zm168 102V114c0-55 45-100 100-100s100 45 100 100v532c0 18-14 34-32 34h-68c-18 0-34-16-34-34V350z" />
+                        </svg>
+                        NUESTRA CARTA
+                    </button>
+                </a>
+            </article>
+        </section>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#201f1f" class="rotate-[180deg]">
+            <path d="M0 1v99c134.3 0 153.7-99 296-99H0Z" opacity=".5"></path>
+            <path d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"></path>
+            <path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"></path>
+            <path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"></path>
+        </svg>
+        <section class="w-full h-auto py-10 md:py-0 md:pt-6 md:pb-5 bg-[#201f1f]" id="informacion">
+            <article
+                class="w-full h-full max-w-7xl px-4 md:px-8 mx-auto text-white flex flex-col justify-center items-center">
+
+                <div class="flex flex-col items-center">
+                    <h2 class="flex items-center font-bebas text-4xl lg:text-5xl 2xl:text-6xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 717 717"
+                            class="mr-2">
+                            <path fill="#ffffff"
+                                d="M358 0c198 0 359 161 359 359S556 717 358 717S0 557 0 359S160 0 358 0m-4 132c-10 12-15 26-15 41c0 12 4 22 10 29c7 7 17 11 27 11c14 0 27-6 37-18c9-11 14-27 14-44c0-10-3-19-10-26s-17-11-27-11c-13 0-26 6-36 18m-91 207l12 13c9-10 18-18 24-23c6-4 11-6 15-6c3 0 6 1 8 3c1 3 2 6 2 11c0 25-3 41-16 101s-20 104-20 133c0 11 2 19 6 24c3 5 9 9 17 9c13 0 32-10 54-27c22-18 44-43 68-75l-13-11c-8 10-16 17-22 22c-6 4-11 8-15 8c-3 0-6-3-8-5c-1-3-2-7-2-13c0-4 1-17 5-40c3-23 2-23 8-57c1-10 4-24 7-41c8-51 13-82 13-92c0-9-3-17-6-22c-4-5-10-7-17-7c-12 0-28 9-50 25c-22 17-44 40-70 70" />
+                        </svg>
+                        <span class="text-green-500">INFO</span>RMA<span class="text-red-500">CIÓN</span>
+                    </h2>
+                    <h3 class="text-center text-lg sm:text-xl lg:text-2xl 2xl:text-3xl">
+                        Todo sobre nuestro servicio y atención
+                    </h3>
+                </div>
+
+                <div class="flex flex-col items-center justify-center mt-6 lg:flex-row lg:justify-between">
+                    <div class="grid grid-cols-1 gap-y-8 mb-4 md:grid-cols-2 md:gap-x-8 md:gap-y-7">
+
+                        <div class="flex">
+                            <span class="p-2 bg-negrito2 rounded-lg h-14 mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M10.002 2.483a.5.5 0 0 1-.466.532a7 7 0 1 0 7.449 7.447a.5.5 0 1 1 .998.065a8 8 0 1 1-8.512-8.51a.5.5 0 0 1 .531.466m1.005.067a.5.5 0 0 1 .59-.391q.841.171 1.608.509a.5.5 0 1 1-.4.916a7 7 0 0 0-1.407-.445a.5.5 0 0 1-.39-.59m6.329 4.253a.5.5 0 1 0-.917.4q.293.665.441 1.397a.5.5 0 0 0 .98-.2a8 8 0 0 0-.504-1.597m-2.921-2.888a.5.5 0 0 1 .704-.063q.584.486 1.067 1.074a.5.5 0 1 1-.773.635a7 7 0 0 0-.934-.941a.5.5 0 0 1-.064-.705M10 5.5a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5h3a.5.5 0 1 0 0-1H10z" />
+                                </svg>
+                            </span>
+                            <div class="max-w-[275px]">
+                                <p class="mb-1 font-bold text-xl lg:text-2xl">Horarios</p>
+                                <p>Nuestros horarios son de <span class="font-bold">miércoles</span> a <span
+                                        class="font-bold">domingo</span> de <span class="font-bold">19hs</span> a <span
+                                        class="font-bold">00:00hs</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <span class="p-2 bg-negrito2 rounded-lg h-14 mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                    <path fill="#ffffff"
+                                        d="M13.5 12.423q-.846 0-1.423-.577t-.577-1.423T12.077 9t1.423-.577T14.923 9t.577 1.423t-.577 1.423t-1.423.577m-6.192 3.193q-.667 0-1.141-.475q-.475-.475-.475-1.141V6.846q0-.666.475-1.14t1.14-.475h12.385q.667 0 1.141.474t.475 1.141V14q0 .666-.475 1.14q-.474.476-1.14.476zm1-1h10.384q0-.672.475-1.144q.474-.472 1.14-.472V7.846q-.67 0-1.142-.474q-.473-.475-.473-1.141H8.308q0 .671-.475 1.143q-.474.472-1.14.472V13q.67 0 1.143.475q.472.474.472 1.14m9.538 4H4.308q-.667 0-1.141-.474q-.475-.475-.475-1.141V8.692q0-.212.144-.356t.357-.144t.356.144t.143.356V17q0 .23.192.423q.193.193.424.193h13.538q.213 0 .356.143q.144.144.144.357t-.144.356t-.356.144m-10.538-4h-.616V6.23h.616q-.25 0-.433.183t-.183.432V14q0 .25.183.433t.433.183" />
+                                </svg>
+                            </span>
+                            <div class="max-w-[285px]">
+                                <p class="mb-1 font-bold text-xl lg:text-2xl">Metodos de pago</p>
+                                <p>Los metodos de pago que <span class="font-bold">aceptamos</span> son <span
+                                        class="font-bold">efectivo</span> y <span class="font-bold">transferencia</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <span class="p-2 bg-negrito2 rounded-lg h-14 mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48">
+                                    <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12.5 16.405c-5.21 0-7.601-2.38-6.846-9.97h25.081c6.557.097 11.825 5.939 11.765 12.963s-5.425 13.04-11.983 12.942H17.606l-1.87 6.043c-1.1 3.337-4.015 2.931-10.092 2.931l4.716-18.578h19.78c1.316 0 3.057-.923 3.057-3.342c0-2.204-1.74-2.988-3.054-2.989z" />
+                                </svg>
+                            </span>
+                            <div class="max-w-[275px]">
+                                <p class="mb-1 font-bold text-xl lg:text-2xl">Entrega de pedido</p>
+                                <p><span class="font-bold">NO</span> tenemos <span class="font-bold">local</span> pero
+                                    se puede <span class="font-bold">retirar personalmente</span> o a través de <span
+                                        class="font-bold">delivery</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <span class="p-2 bg-negrito2 rounded-lg h-14 mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M10.002 2.483a.5.5 0 0 1-.466.532a7 7 0 1 0 7.449 7.447a.5.5 0 1 1 .998.065a8 8 0 1 1-8.512-8.51a.5.5 0 0 1 .531.466m1.005.067a.5.5 0 0 1 .59-.391q.841.171 1.608.509a.5.5 0 1 1-.4.916a7 7 0 0 0-1.407-.445a.5.5 0 0 1-.39-.59m6.329 4.253a.5.5 0 1 0-.917.4q.293.665.441 1.397a.5.5 0 0 0 .98-.2a8 8 0 0 0-.504-1.597m-2.921-2.888a.5.5 0 0 1 .704-.063q.584.486 1.067 1.074a.5.5 0 1 1-.773.635a7 7 0 0 0-.934-.941a.5.5 0 0 1-.064-.705M10 5.5a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5h3a.5.5 0 1 0 0-1H10z" />
+                                </svg>
+                            </span>
+                            <div class="max-w-[275px]">
+                                <p class="mb-1 font-bold text-xl lg:text-2xl">Tiempo de entrega</p>
+                                <p>El tiempo de entrega es de <span class="font-bold">30/45 minutos (depende la
+                                        ubicacion y demanda)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="menu.html#Pizzas" class="flex md:hidden">
+                        <button
+                            class="items-center font-mediumbold text-gray-900 rounded-xl bg-white px-3 py-1 justify-center font-bebas text-2xl tracking-wide lg:px-4 lg:py-2 lg:text-3xl bouncing-element mt-[5px] flex ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 64 64" class="mr-2">
+                                <g fill="#000" fill-rule="evenodd"><path d="M61.821 11.045c.703-1.309-.891-.912-.891-.912s-10.627 10.201-12.104 8.951S59.231 8.057 57.825 6.23c-1.301-1.703-11.74 10.455-12.994 8.97c-1.242-1.482 8.939-12.123 8.939-12.123s.387-1.602-.912-.9C36.851 10.785 34.812 18.81 34.812 18.81s-.551 1.563.645 2.771c.117.105-29.204 29.26-33.129 33.196c-1.91 1.908 5.098 8.801 6.996 6.893c3.926-3.936 33.024-33.303 33.129-33.194c1.207 1.205 2.766.652 2.766.652s8.012-2.045 16.602-18.083"/><path d="M32.028 40.507c7.803 7.82 20.958 20.999 20.958 20.999s5.742-1.879 6.551-6.729L38.662 33.861a5104 5104 0 0 0-6.634 6.646M21.76 33.729a5059 5059 0 0 0 8.387-8.4L7.459 2.598s-.41-.43-1.313.477C4.353 4.862.884 16.248 15.591 30.977c2.331 2.336 4.359 2.66 6.169 2.752"/></g>
+                            </svg>
+                            HACÉ TU PEDIDO
+                        </button>
+                    </a>
+                    <img src="assets/delivery-man-2-1.webp" alt="delivery" class="w-[400px] md:w-[450px]">
+                </div>
+
+                <a href="menu.html#Pizzas" class="hidden md:flex">
+                    <button
+                        class="items-center font-mediumbold text-gray-900 rounded-xl bg-white px-3 py-1 justify-center font-bebas text-2xl tracking-wide lg:px-4 lg:py-2 lg:text-3xl bouncing-element mt-[5px] flex ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 64 64" class="mr-2">
+                            <g fill="#000" fill-rule="evenodd"><path d="M61.821 11.045c.703-1.309-.891-.912-.891-.912s-10.627 10.201-12.104 8.951S59.231 8.057 57.825 6.23c-1.301-1.703-11.74 10.455-12.994 8.97c-1.242-1.482 8.939-12.123 8.939-12.123s.387-1.602-.912-.9C36.851 10.785 34.812 18.81 34.812 18.81s-.551 1.563.645 2.771c.117.105-29.204 29.26-33.129 33.196c-1.91 1.908 5.098 8.801 6.996 6.893c3.926-3.936 33.024-33.303 33.129-33.194c1.207 1.205 2.766.652 2.766.652s8.012-2.045 16.602-18.083"/><path d="M32.028 40.507c7.803 7.82 20.958 20.999 20.958 20.999s5.742-1.879 6.551-6.729L38.662 33.861a5104 5104 0 0 0-6.634 6.646M21.76 33.729a5059 5059 0 0 0 8.387-8.4L7.459 2.598s-.41-.43-1.313.477C4.353 4.862.884 16.248 15.591 30.977c2.331 2.336 4.359 2.66 6.169 2.752"/></g>
+                        </svg>
+                        HACÉ TU PEDIDO
+                    </button>
+                </a>
+            </article>
+        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#201f1f">
+            <path d="M0 1v99c134.3 0 153.7-99 296-99H0Z" opacity=".5"></path>
+            <path d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"></path>
+            <path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"></path>
+            <path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"></path>
+        </svg>
+
+        <section class="w-full max-w-[850px] h-auto my-20 px-2 lg:px-0">
+            <article
+                class="w-full max-w-7xl mx-auto rounded-xl bg-[#181818] text-white flex flex-col items-center h-auto md:h-[35dvh] py-6 md:py-4 justify-evenly">
+                <div class="flex flex-col items-center">
+                    <h2 class="flex items-center font-bebas text-4xl lg:text-5xl 2xl:text-6xl font-bold tracking-wider">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" class="mr-2">
+                            <g fill="none">
+                                <path
+                                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                <path fill="#ffffff"
+                                    d="M10 3c4.071 0 7.7 2.67 7.982 6.368c2.304.862 4.018 2.81 4.018 5.26c0 1.867-1.026 3.472-2.52 4.493a2.3 2.3 0 0 0-.022.439l.014.44a1 1 0 0 1-1 1c-.758 0-1.46-.247-2.054-.71a8 8 0 0 1-1.105.078c-2.767 0-5.322-1.491-6.284-3.751a9 9 0 0 1-.454-.058c-.716.567-1.54.885-2.464.885a1 1 0 0 1-1-1l.005-.203l.018-.41a2.1 2.1 0 0 0-.058-.608C3.248 14.004 2 12.073 2 9.833C2 5.896 5.76 3 10 3m5.313 7.889c-2.768 0-4.688 1.837-4.688 3.74c0 1.902 1.92 3.74 4.688 3.74a6 6 0 0 0 1.078-.101c.434-.082.819.1 1.15.36c.099-.433.324-.842.706-1.088C19.363 16.82 20 15.753 20 14.629c0-1.903-1.92-3.74-4.687-3.74M10 5C6.508 5 4 7.327 4 9.833c0 1.477.837 2.858 2.264 3.777c.531.343.76.957.83 1.559l.482-.342c.308-.208.63-.366 1.05-.288c.056-3.286 3.203-5.65 6.687-5.65q.288 0 .573.021C15.362 6.784 13.059 5 10 5m3.62 8a1 1 0 1 1 0 2a1 1 0 0 1 0-2M17 13a1 1 0 1 1 0 2a1 1 0 0 1 0-2M8 7a1 1 0 1 1 0 2a1 1 0 0 1 0-2m4 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2" />
+                            </g>
+                        </svg>
+                        NUESTRAS <span class="text-green-500 ml-2">RE</span>D<span class="text-red-500">ES</span>
+                    </h2>
+                    <p class="mb-4">Seguinos en todas las redes</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-y-5 md:grid-cols-3 md:gap-y-0 md:gap-x-5">
+                    <div class="bg-negrito2 flex p-4 rounded-lg">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 256 256">
+                                <g fill="none">
+                                    <rect width="256" height="256" fill="url(#IconifyId1915e4fc3874213390)" rx="60" />
+                                    <rect width="256" height="256" fill="url(#IconifyId1915e4fc3874213391)" rx="60" />
+                                    <path fill="#fff"
+                                        d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396s-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413s.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5s6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355s22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334s-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334" />
+                                    <defs>
+                                        <radialGradient id="IconifyId1915e4fc3874213390" cx="0" cy="0" r="1"
+                                            gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FD5" />
+                                            <stop offset=".1" stop-color="#FD5" />
+                                            <stop offset=".5" stop-color="#FF543E" />
+                                            <stop offset="1" stop-color="#C837AB" />
+                                        </radialGradient>
+                                        <radialGradient id="IconifyId1915e4fc3874213391" cx="0" cy="0" r="1"
+                                            gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#3771C8" />
+                                            <stop offset=".128" stop-color="#3771C8" />
+                                            <stop offset="1" stop-color="#60F" stop-opacity="0" />
+                                        </radialGradient>
+                                    </defs>
+                                </g>
+                            </svg>
+                        </span>
+                        <div class="flex flex-col ml-2">
+                            <p class="font-bold text-lg">Instagram</p>
+                            <p>@cibo.ricco.pizzeria</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-negrito2 flex p-4 rounded-lg">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 256 258">
+                                <defs>
+                                    <linearGradient id="IconifyId1915e4fc3874213394" x1="50%" x2="50%" y1="100%"
+                                        y2="0%">
+                                        <stop offset="0%" stop-color="#1FAF38" />
+                                        <stop offset="100%" stop-color="#60D669" />
+                                    </linearGradient>
+                                    <linearGradient id="IconifyId1915e4fc3874213395" x1="50%" x2="50%" y1="100%"
+                                        y2="0%">
+                                        <stop offset="0%" stop-color="#F9F9F9" />
+                                        <stop offset="100%" stop-color="#FFF" />
+                                    </linearGradient>
+                                </defs>
+                                <path fill="url(#IconifyId1915e4fc3874213394)"
+                                    d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
+                                <path fill="url(#IconifyId1915e4fc3874213395)"
+                                    d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
+                                <path fill="#FFF"
+                                    d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
+                            </svg>
+                        </span>
+                        <div class="flex flex-col ml-2">
+                            <p class="font-bold text-lg">Whatsapp</p>
+                            <p>+54 9 3442 50-0075</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-negrito2 flex p-4 rounded-lg">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 128 128">
+                                <rect width="118.35" height="118.35" x="4.83" y="4.83" fill="#3d5a98" rx="6.53"
+                                    ry="6.53" />
+                                <path fill="#fff"
+                                    d="M86.48 123.17V77.34h15.38l2.3-17.86H86.48v-11.4c0-5.17 1.44-8.7 8.85-8.7h9.46v-16A127 127 0 0 0 91 22.7c-13.62 0-23 8.3-23 23.61v13.17H52.62v17.86H68v45.83z" />
+                            </svg>
+                        </span>
+                        <div class="flex flex-col ml-2">
+                            <p class="font-bold text-lg">Facebook</p>
+                            <p>Cibo Ricco Pizzería</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-[#191919] h-auto flex justify-center w-full">
+        <div
+            class="max-w-7xl mx-auto w-full h-full text-white flex flex-col items-center justify-between py-6 sm:flex-row px-4 md:px-8">
+            <div class="">
+                <p class="font-bold">Acceso rápido</p>
+                <ul>
+                    <li><a href="#inicio">&bullet; Inicio</a></li>
+                    <li><a href="#sobre-nosotros">&bullet; Sobre Nosotros</a></li>
+                    <li><a href="#informacion">&bullet; Informacion</a></li>
+                    <li><a href="menu.html">&bullet; Menú</a></li>
+                </ul>
+            </div>
+
+            <a href="menu.html#Pizzas">
+                <button
+                    class="items-center font-mediumbold text-gray-900 rounded-xl bg-white px-3 py-1 justify-center font-bebas text-2xl tracking-wide lg:px-4 lg:py-2 lg:text-3xl bouncing-element mt-[5px] flex ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 64 64" class="mr-2">
+                        <g fill="#000" fill-rule="evenodd"><path d="M61.821 11.045c.703-1.309-.891-.912-.891-.912s-10.627 10.201-12.104 8.951S59.231 8.057 57.825 6.23c-1.301-1.703-11.74 10.455-12.994 8.97c-1.242-1.482 8.939-12.123 8.939-12.123s.387-1.602-.912-.9C36.851 10.785 34.812 18.81 34.812 18.81s-.551 1.563.645 2.771c.117.105-29.204 29.26-33.129 33.196c-1.91 1.908 5.098 8.801 6.996 6.893c3.926-3.936 33.024-33.303 33.129-33.194c1.207 1.205 2.766.652 2.766.652s8.012-2.045 16.602-18.083"/><path d="M32.028 40.507c7.803 7.82 20.958 20.999 20.958 20.999s5.742-1.879 6.551-6.729L38.662 33.861a5104 5104 0 0 0-6.634 6.646M21.76 33.729a5059 5059 0 0 0 8.387-8.4L7.459 2.598s-.41-.43-1.313.477C4.353 4.862.884 16.248 15.591 30.977c2.331 2.336 4.359 2.66 6.169 2.752"/></g>
+                    </svg>
+                    HACÉ TU PEDIDO
+                </button>
+            </a>
+
+            <div class="flex items-center">
+                <img src="assets/logo2.webp" alt="logo" width="70" height="70">
+                <p class="font-bebas text-3xl font-semibold tracking-wide">
+                    CIBO RICCO<br><span class="text-green-500">Piz</span>ze<span class="text-red-500">ría</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js" type="module"></script>
+</body>
+
+</html>
