@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#enviar-pedido {
+  transition: all .4s ease;
+}
+
+#enviar-pedido:hover {
+  background: #191919;
+  color: white;
+}
+
+.fuga {
+  object-position: center -50px;
+}
+
+.bg-menupedido {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 10000;
+}
+
+.pizza {
+ top: 85%;
+}
+
+.bg-menu {
+ background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url(assets/gallery-8.webp);
+ background-attachment: fixed;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.bg-carta {
+ background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url(assets/menu-hero.webp);
+ background-attachment: fixed;
+ background-position: 0 center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.bg-hero {
+ background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  url(assets/hero-image.webp);
+}
+
+.bg-about {
+ background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url(assets/about-us.webp);
+ background-position: center center;
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+ .bg-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+   url(assets/hero-image-md.webp);
+ }
+}
+
+@media (max-width: 337px) {
+ .bg-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+   url(assets/hero-image-sm.webp);
+ }
+}
+
+.bg-header {
+ background-color: #00000036;
+ backdrop-filter: blur(3px);
+ z-index: 9999;
+}
+
+.btnreserva {
+ background: -webkit-linear-gradient(to right, #e25151, #43da70);
+ background: linear-gradient(to right, #e25151, #43da70);
+ transition: all 0.5s ease;
+}
+
+.btnreserva:hover {
+ scale: 105%;
+}
+
+.hovAnim::after {
+ content: "";
+ display: block;
+ width: 0;
+ height: 2px;
+ background: linear-gradient(
+  to right,
+  green 33.33%,
+  white 33.33% 66.66%,
+  red 66.66%
+ );
+
+ transition: width 0.3s;
+}
+
+.hovAnim:hover::after {
+ width: 100%;
+}
+
+.bg-nav {
+ background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+@keyframes calm-bounce {
+ 0%,
+ 100% {
+  transform: translateY(0);
+ }
+ 50% {
+  transform: translateY(7px);
+ }
+}
+
+.bouncing-element {
+ position: relative;
+ animation: calm-bounce 1.2s infinite;
+ animation-timing-function: ease-in-out;
+}
