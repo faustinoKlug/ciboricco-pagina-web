@@ -98,6 +98,7 @@ const displayCart = () => {
           product.productType = "Media";
       
           switch (product.id) {
+<<<<<<< HEAD
             case 12: 
             case 13: 
             case 14: 
@@ -113,6 +114,23 @@ const displayCart = () => {
               product.price = 6500; 
               break;
             case 15: 
+=======
+            case 12: // JAMÓN Y QUESO
+            case 13: // POLLO
+            case 14: // VERDURA
+              product.price = 5500;
+              break;
+            case 16: // CARNE
+              product.price = 6500;
+              break;
+            case 17: // ARABE
+              product.price = 6900; // Corregido a 6500
+              break;
+            case 18: // CAPRESSE
+              product.price = 6500; // Corregido a 6000
+              break;
+            case 15: // CEBOLLA Y QUESO
+>>>>>>> e5d2910af529282587a64fc73215b6502e67277c
               product.price = 5900;
               break;
             default:
@@ -126,13 +144,24 @@ const displayCart = () => {
         }
         updatePrice(priceElement, product);
         updateTotal();
+<<<<<<< HEAD
       });   
+=======
+      });
+      
+      
+      
+>>>>>>> e5d2910af529282587a64fc73215b6502e67277c
 
       if (unitCheckbox) {
         unitCheckbox.addEventListener('change', () => {
           if (unitCheckbox.checked) {
             mediaCheckbox.checked = false;
             product.productType = "Unidad";
+<<<<<<< HEAD
+=======
+            // Add prices for unit option if necessary
+>>>>>>> e5d2910af529282587a64fc73215b6502e67277c
           } else {
             if (!mediaCheckbox?.checked) {
               product.price = product.originalPrice;
